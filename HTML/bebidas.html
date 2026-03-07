@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Bebidas Destacadas</title>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<style>
+  body{
+    font-family: Arial, sans-serif;
+    padding:20px;
+  }
+
+  .bebidas-btn{
+    background:#7c603b;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:6px;
+  }
+
+  .bebidas-btn i{
+    margin-right:8px;
+  }
+
+  .bebidas-menu{
+    display:none;
+    margin-top:20px;
+    background:#f5f5f5;
+    padding:20px;
+    border-radius:8px;
+  }
+
+  h2 i{
+    margin-right:10px;
+    color:#6b3e26;
+  }
+
+  h3{
+    margin-top:20px;
+    color:#6b3e26;
+  }
+
+  ul{
+    margin:0;
+    padding-left:20px;
+  }
+</style>
+</head>
+
+<body>
+
+<button class="bebidas-btn" onclick="mostrarBebidas()">
+  <i class="bi bi-cup-fill"></i> Bebidas Destacadas
+</button>
+
+<div class="bebidas-menu" id="menuBebidas">
+
+<h2><i class="bi bi-cup-fill"></i> Bebidas de la Cafetería</h2>
+
+<h3>Cafés Calientes</h3>
+<ul>
+<li>Espresso</li>
+<li>Espresso Doble</li>
+<li>Americano</li>
+<li>Café Negro</li>
+<li>Café con Leche</li>
+<li>Cappuccino</li>
+<li>Latte</li>
+<li>Latte Vainilla</li>
+<li>Latte Caramelo</li>
+<li>Moca</li>
+<li>Moca Blanco</li>
+<li>Café Cortado</li>
+<li>Flat White</li>
+</ul>
+
+<h3>Cafés Fríos</h3>
+<ul>
+<li>Iced Coffee</li>
+<li>Iced Latte</li>
+<li>Iced Cappuccino</li>
+<li>Cold Brew</li>
+<li>Cold Brew Vainilla</li>
+<li>Cold Brew Caramelo</li>
+<li>Frappé de Café</li>
+<li>Frappé Moca</li>
+<li>Frappé Caramelo</li>
+</ul>
+
+<h3>Chocolate y Bebidas Calientes</h3>
+<ul>
+<li>Chocolate Caliente</li>
+<li>Chocolate Blanco</li>
+<li>Chocolate con Malvaviscos</li>
+<li>Leche Caliente con Canela</li>
+</ul>
+
+<h3>Tés</h3>
+<ul>
+<li>Té Verde</li>
+<li>Té Negro</li>
+<li>Té de Manzanilla</li>
+<li>Té de Menta</li>
+<li>Té de Jengibre</li>
+<li>Té Chai Latte</li>
+</ul>
+
+<h3>Jugos Naturales</h3>
+<ul>
+<li>Jugo de Naranja</li>
+<li>Jugo de Limón</li>
+<li>Jugo de Piña</li>
+<li>Jugo de Chinola</li>
+<li>Jugo de Fresa</li>
+<li>Jugo de Mango</li>
+<li>Jugo de Sandía</li>
+</ul>
+
+<h3>Batidas / Smoothies</h3>
+<ul>
+<li>Batida de Fresa</li>
+<li>Batida de Banano</li>
+<li>Batida de Mango</li>
+<li>Batida de Chocolate</li>
+<li>Smoothie de Fresa y Yogur</li>
+<li>Smoothie Tropical</li>
+<li>Smoothie de Mango y Piña</li>
+</ul>
+
+<h3>Otras Bebidas</h3>
+<ul>
+<li>Agua Mineral</li>
+<li>Agua con Gas</li>
+<li>Refrescos</li>
+<li>Limonada Natural</li>
+<li>Limonada con Hierbabuena</li>
+<li>Soda Italiana</li>
+</ul>
+
+</div>
+
+<script>
+function mostrarBebidas() {
+  var menu = document.getElementById("menuBebidas");
+
+  if(menu.style.display === "none" || menu.style.display === ""){
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
