@@ -1,6 +1,6 @@
 <<<<<<< Updated upstream
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   background-image: url("../cafe.png");
   background-size: cover;
@@ -9,9 +9,9 @@ body {
 }
 
 .container {
-  min-width: 800px;
+  min-width: 1100px;
   width: 100%;
-  height: 200px;
+  height: 1000px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -24,6 +24,26 @@ body {
   color: white;
   padding: 40px;
   background: rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
 }
 
 .menu-section {
@@ -39,22 +59,28 @@ body {
 .menu {
   width: 60%;
   border-collapse: collapse;
-  background: rgba(200, 174, 174, 0.167);
+  background: rgba(0, 0, 0, 0.167);
 }
 
 .menu th {
   background-color: rgba(21, 10, 4, 0.7);
   color: rgb(184, 68, 10);
   padding: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .menu td {
+  font-size: 15px;
+  font-weight: 500px;
+  color: #bab4b4;
   padding: 20px;
   border-bottom: 1px solid rgba(67, 67, 67, 0.255);
+  font-size: 16px;
 }
 
 .menu tr:hover {
-  background-color: #f2f2f2;
+  background-color: rgba(114, 111, 111, 0.3);
 }
 
 .footer {
@@ -64,6 +90,7 @@ body {
   padding: 20px;
   background: rgba(0, 0, 0, 0.6);
   color: white;
+<<<<<<< HEAD
 }
 =======
 body{
@@ -77,3 +104,7 @@ body{
 }
 
 >>>>>>> Stashed changes
+=======
+  font-size: 14px;
+}
+>>>>>>> 0e52c614630b4a745701df523a0ac7be5566fbc4
