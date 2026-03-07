@@ -8,9 +8,9 @@ body {
 }
 
 .container {
-  min-width: 800px;
+  min-width: 1100px;
   width: 100%;
-  height: 200px;
+  height: 1000px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -38,7 +38,7 @@ body {
 .menu {
   width: 60%;
   border-collapse: collapse;
-  background: rgba(200, 174, 174, 0.167);
+  background: rgba(0, 0, 0, 0.167);
 }
 
 .menu th {
@@ -48,12 +48,15 @@ body {
 }
 
 .menu td {
+  font-size: 15px;
+  font-weight: 500px;
+  color: #bab4b4;
   padding: 20px;
   border-bottom: 1px solid rgba(67, 67, 67, 0.255);
 }
 
 .menu tr:hover {
-  background-color: #f2f2f2;
+  background-color: rgba(114, 111, 111, 0.3);
 }
 
 .footer {
