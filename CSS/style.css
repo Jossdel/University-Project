@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body{
     font-family: Arial, sans-serif;
     margin:0;
@@ -7,3 +8,41 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
+=======
+body {
+  font-family: Arial;
+  background-color: #f4f4f4;
+}
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+}
+.header {
+  grid-column: 1/-1;
+  grid-row: span 2;
+}
+.menu {
+  width: 60%;
+  margin: auto;
+  border-collapse: collapse;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.menu th {
+  background-color: rgba(76, 35, 13, 0.5);
+  color: rgb(128, 53, 15);
+  padding: 10px;
+}
+
+.menu td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu tr:hover {
+  background-color: #f2f2f2;
+}
+>>>>>>> Stashed changes
