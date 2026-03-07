@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-image: url("../cafe.jpg");
+  background-image: url("../cafe.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,7 +9,8 @@ body {
 
 .container {
   min-width: 800px;
-  width: 90%;
+  width: 100%;
+  height: 200px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
