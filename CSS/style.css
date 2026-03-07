@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   background-image: url("../cafe.png");
   background-size: cover;
@@ -25,6 +25,26 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
 .menu-section {
   grid-column: span 2;
   grid-row: span 4;
@@ -45,6 +65,8 @@ body {
   background-color: rgba(21, 10, 4, 0.7);
   color: rgb(184, 68, 10);
   padding: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 .menu td {
@@ -53,6 +75,7 @@ body {
   color: #bab4b4;
   padding: 20px;
   border-bottom: 1px solid rgba(67, 67, 67, 0.255);
+  font-size: 16px;
 }
 
 .menu tr:hover {
@@ -66,4 +89,5 @@ body {
   padding: 20px;
   background: rgba(0, 0, 0, 0.6);
   color: white;
+  font-size: 14px;
 }
