@@ -1,6 +1,5 @@
-<<<<<<< Updated upstream
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   background-image: url("../cafe.png");
   background-size: cover;
@@ -27,7 +26,7 @@ body {
 }
 
 .header h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 50px;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -37,9 +36,13 @@ body {
   font-size: 18px;
   font-weight: 300;
 }
+main,
+h2 {
+  color: black;
+}
 
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 32px;
   text-align: center;
   color: white;
@@ -72,15 +75,15 @@ h2 {
 
 .menu td {
   font-size: 15px;
-  font-weight: 500px;
-  color: #bab4b4;
+  font-weight: 700;
+  color: #e1e1e1;
   padding: 20px;
-  border-bottom: 1px solid rgba(67, 67, 67, 0.255);
+  border-bottom: 1px solid rgba(67, 67, 67, 0.2);
   font-size: 16px;
 }
 
 .menu tr:hover {
-  background-color: rgba(114, 111, 111, 0.3);
+  background-color: rgba(114, 111, 111, 0.1);
 }
 
 .footer {
@@ -90,21 +93,4 @@ h2 {
   padding: 20px;
   background: rgba(0, 0, 0, 0.6);
   color: white;
-<<<<<<< HEAD
 }
-=======
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-
-    background-image: url("img/cafe.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
->>>>>>> Stashed changes
-=======
-  font-size: 14px;
-}
->>>>>>> 0e52c614630b4a745701df523a0ac7be5566fbc4
