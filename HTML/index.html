@@ -1,231 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Cafetería Aroma</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="../CSS/style.css">
-
-</head>
-
-<body>
-
-<section class="hero">
-
-<h1>Cafetería Aroma</h1>
-
-<div class="steam"></div>
-
-<p>El mejor café de la ciudad</p>
-
-<a href="#cafe" class="hero-btn">Ver Menú</a>
-
-</section>
-
-<nav class="navbar">
-
-<ul>
-<li><a href="#cafe">Café</a></li>
-<li><a href="#jugos">Jugos</a></li>
-<li><a href="#sandwich">Sandwich</a></li>
-<li><a href="#postres">Postres</a></li>
-</ul>
-
-</nav>
-
-<main class="menu-grid">
-
-<section class="menu-card">
-
-<h2 id="cafe">Café</h2>
-
-<img src="../img/cafes.jpg" class="menu-img">
-
-<table class="menu">
-
-<tr>
-<th>Producto</th>
-<th>Descripción</th>
-<th>Precio</th>
-</tr>
-
-<tr>
-<td>Café Americano</td>
-<td>Café negro tradicional</td>
-<td>$2</td>
-</tr>
-
-<tr>
-<td>Cappuccino</td>
-<td>Café con leche y espuma</td>
-<td>$3</td>
-</tr>
-
-<tr>
-<td>Latte</td>
-<td>Café con leche cremoso</td>
-<td>$3.5</td>
-</tr>
-
-<tr>
-<td>Chocolate caliente</td>
-<td>Bebida de cacao con leche</td>
-<td>$2.5</td>
-</tr>
-
-</table>
-
-</section>
-
-<section class="menu-card">
-
-<h2 id="jugos">Jugos</h2>
-
-<img src="../img/jugos.jpg" class="menu-img">
-
-<table class="menu">
-
-<tr>
-<th>Producto</th>
-<th>Descripción</th>
-<th>Precio</th>
-</tr>
-
-<tr>
-<td>Jugo de naranja</td>
-<td>Natural recién exprimido</td>
-<td>$2.5</td>
-</tr>
-
-<tr>
-<td>Batida de fresa</td>
-<td>Fresa con leche</td>
-<td>$3</td>
-</tr>
-
-</table>
-
-</section>
-
-<section class="menu-card">
-
-<h2 id="sandwich">Sandwich</h2>
-
-<img src="../img/sandwichs.jpg" class="menu-img">
-
-<table class="menu">
-
-<tr>
-<th>Producto</th>
-<th>Descripción</th>
-<th>Precio</th>
-</tr>
-
-<tr>
-<td>Sandwich de jamón</td>
-<td>Jamón y queso</td>
-<td>$4</td>
-</tr>
-
-<tr>
-<td>Sandwich club</td>
-<td>Pollo, lechuga y tomate</td>
-<td>$5</td>
-</tr>
-
-</table>
-
-</section>
-
-<section class="menu-card">
-
-<h2 id="postres">Postres</h2>
-
-<img src="../img/postres.jpg" class="menu-img">
-
-<table class="menu">
-
-<tr>
-<th>Producto</th>
-<th>Descripción</th>
-<th>Precio</th>
-</tr>
-
-<tr>
-<td>Cheesecake</td>
-<td>Tarta de queso cremosa</td>
-<td>$3.5</td>
-</tr>
-
-<tr>
-<td>Brownie</td>
-<td>Pastel de chocolate</td>
-<td>$3</td>
-</tr>
-
-</table>
-
-</section>
-
-</main>
-
-<footer class="footer">
-
-<div class="footer-container">
-
-<div class="footer-card">
-<h3>📍 Dirección</h3>
-<p>Calle Café #123</p>
-</div>
-
-<div class="footer-card">
-<h3>📞 Teléfono</h3>
-<p>809-000-0000</p>
-</div>
-
-<div class="footer-card">
-<h3>☕ Horario</h3>
-<p>Lunes - Domingo</p>
-<p>7:00 AM - 10:00 PM</p>
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 Cafetería Aroma
-</p>
-
-</footer>
-
-<a href="https://wa.me/18090000000" class="whatsapp-btn" target="_blank">
-💬
-</a>
-
-<script>
-
-window.addEventListener("scroll",function(){
-
-let navbar=document.querySelector(".navbar");
-
-if(window.scrollY>50){
-
-navbar.style.background="black";
-
-}else{
-
-navbar.style.background="rgba(0,0,0,0.7)";
-
-}
-
-});
-
-</script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cafetería Aroma</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+
+  <body>
+    <section class="hero">
+      <h1>Cafetería Aroma</h1>
+
+      <div class="steam"></div>
+
+      <p>El mejor café de la ciudad</p>
+
+      <a href="#cafe" class="hero-btn">Ver Menú</a>
+    </section>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#cafe">Café</a></li>
+        <li><a href="#jugos">Jugos</a></li>
+        <li><a href="#sandwich">Sandwich</a></li>
+        <li><a href="#postres">Postres</a></li>
+      </ul>
+    </nav>
+
+    <main class="menu-grid">
+      <section class="menu-card">
+        <h2 id="cafe">Café</h2>
+
+        <img src="../img/cafes.jpg" class="menu-img" />
+
+        <table class="menu">
+          <tr>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+          </tr>
+
+          <tr>
+            <td>Café Americano</td>
+            <td>Café negro tradicional</td>
+            <td>$2</td>
+          </tr>
+
+          <tr>
+            <td>Cappuccino</td>
+            <td>Café con leche y espuma</td>
+            <td>$3</td>
+          </tr>
+
+          <tr>
+            <td>Latte</td>
+            <td>Café con leche cremoso</td>
+            <td>$3.5</td>
+          </tr>
+
+          <tr>
+            <td>Chocolate caliente</td>
+            <td>Bebida de cacao con leche</td>
+            <td>$2.5</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="menu-card">
+        <h2 id="jugos">Jugos</h2>
+
+        <img src="../img/jugos.jpg" class="menu-img" />
+
+        <table class="menu">
+          <tr>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+          </tr>
+
+          <tr>
+            <td>Jugo de naranja</td>
+            <td>Natural recién exprimido</td>
+            <td>$2.5</td>
+          </tr>
+
+          <tr>
+            <td>Batida de fresa</td>
+            <td>Fresa con leche</td>
+            <td>$3</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="menu-card">
+        <h2 id="sandwich">Sandwich</h2>
+
+        <img src="../img/sandwichs.jpg" class="menu-img" />
+
+        <table class="menu">
+          <tr>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+          </tr>
+
+          <tr>
+            <td>Sandwich de jamón</td>
+            <td>Jamón y queso</td>
+            <td>$4</td>
+          </tr>
+
+          <tr>
+            <td>Sandwich club</td>
+            <td>Pollo, lechuga y tomate</td>
+            <td>$5</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="menu-card">
+        <h2 id="postres">Postres</h2>
+
+        <img src="../img/postres.jpg" class="menu-img" />
+
+        <table class="menu">
+          <tr>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+          </tr>
+
+          <tr>
+            <td>Cheesecake</td>
+            <td>Tarta de queso cremosa</td>
+            <td>$3.5</td>
+          </tr>
+
+          <tr>
+            <td>Brownie</td>
+            <td>Pastel de chocolate</td>
+            <td>$3</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-card">
+          <h3>📍 Dirección</h3>
+          <p>Calle Café #123</p>
+        </div>
+
+        <div class="footer-card">
+          <h3>📞 Teléfono</h3>
+          <p>809-000-0000</p>
+        </div>
+
+        <div class="footer-card">
+          <h3>☕ Horario</h3>
+          <p>Lunes - Domingo</p>
+          <p>7:00 AM - 10:00 PM</p>
+        </div>
+      </div>
+
+      <p class="copyright">© 2026 Cafetería Aroma</p>
+    </footer>
+
+    <a href="https://wa.me/18090000000" class="whatsapp-btn" target="_blank">
+      💬
+    </a>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        let navbar = document.querySelector(".navbar");
+
+        if (window.scrollY > 50) {
+          navbar.style.background = "rgba(0,0,0,0.7)";
+        } else {
+          navbar.style.background = "rgba(0,0,0,0.7)";
+        }
+      });
+    </script>
+  </body>
 </html>
