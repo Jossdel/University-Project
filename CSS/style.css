@@ -62,6 +62,7 @@ body::before {
 
 .hero-btn:hover {
   background: rgb(230, 90, 20);
+  transform: 1.2s;
   transform: scale(1.05);
 }
 
@@ -315,7 +316,7 @@ h2 {
   bottom: 25px;
   right: 25px;
 
-  background: rgb(184, 68, 10);
+  background: none;
 
   color: white;
 
@@ -340,4 +341,8 @@ h2 {
 
 .whatsapp-btn:hover {
   transform: scale(1.1);
+}
+svg {
+  background-color: none;
+  color: rgb(184, 68, 10, 0.8);
 }
