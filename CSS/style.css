@@ -29,7 +29,7 @@ body::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  padding-top: 70px;
   text-align: center;
   color: white;
   position: relative;
@@ -102,16 +102,21 @@ body::before {
 /* NAVBAR */
 
 .navbar {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.55);
 
-  padding: 15px 0;
+  padding: 12px 0;
 
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
 
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
   z-index: 1000;
+
+  transition: 0.4s ease;
 }
 
 .navbar ul {
@@ -121,10 +126,10 @@ body::before {
 
   justify-content: center;
 
-  gap: 40px;
+  gap: 150px;
 
   margin: 0;
-  padding: 0;
+  padding: 15px;
 }
 
 .navbar a {
