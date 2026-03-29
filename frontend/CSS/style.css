@@ -41,26 +41,13 @@ body::before {
 .hero h1 {
   font-size: 70px;
   font-family: "Playfair Display", serif;
+  color: rgb(247, 235, 223);
 }
 
 .hero p {
   font-size: 22px;
   margin: 20px 0;
-}
-
-.hero-btn {
-  background: rgb(184, 68, 10);
-  color: white;
-  padding: 15px 35px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.hero-btn:hover {
-  background: rgb(230, 90, 20);
-  transform: scale(1.05);
+  color: rgb(247, 235, 223);
 }
 
 /* VAPOR */
@@ -94,7 +81,7 @@ body::before {
 /* NAVBAR */
 
 .navbar {
-  background: transparent;
+  background: #f7edbf;
   padding: 12px 20px;
   position: fixed;
   top: 0;
@@ -107,18 +94,26 @@ body::before {
 }
 
 .navbar h1 {
-  color: #ff4500;
+  color: rgb(55, 36, 20);
   font-size: 45px;
   font-family: "Mea Culpa", cursive;
-  font-weight: 400;
+  font-weight: 600;
 }
 
-.navbar ul svg {
-  color: #ff4500;
+.navbar .carrito {
+  color: rgb(55, 36, 20);
   margin-right: 40px;
   cursor: pointer;
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+  display: inline-block;
 }
 
+.navbar .carrito:hover {
+  color: rgb(96, 85, 75);
+  transform: scale(1.2);
+}
 /* MENU */
 
 .menu-grid {
@@ -173,7 +168,7 @@ h2 {
 
 .menu th {
   background: rgba(21, 10, 4, 0.8);
-  color: rgb(184, 68, 10);
+  color: rgb(55, 36, 20);
   padding: 15px;
 }
 
@@ -190,7 +185,7 @@ h2 {
 /* FOOTER */
 
 .footer {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(55, 36, 20);
   padding: 60px 20px;
   color: white;
   margin-top: 80px;
@@ -199,7 +194,7 @@ h2 {
 .footer-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 200px;
   flex-wrap: wrap;
 }
 
@@ -208,8 +203,8 @@ h2 {
   padding: 25px;
   border-radius: 12px;
   text-align: center;
-  min-height: 180px;
-  width: 150px;
+  height: 130px;
+  width: 220px;
   transition: 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -220,7 +215,7 @@ h2 {
 }
 
 .footer-card h3 {
-  color: rgb(184, 68, 10);
+  color: rgb(25, 16, 9);
 }
 
 .footer-card p {
@@ -240,7 +235,7 @@ h2 {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: transparent;
+  background: #f7edbf;
   width: 60px;
   height: 60px;
   display: flex;
@@ -253,8 +248,7 @@ h2 {
 }
 
 .whatsapp-btn svg {
-  color: rgba(184, 68, 10, 0.8);
-  background-color: transparent;
+  color: rgb(130, 90, 60);
 }
 
 .whatsapp-btn:hover {
