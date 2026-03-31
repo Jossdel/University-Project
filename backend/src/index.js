@@ -1,15 +1,11 @@
 import express from "express";
 import productoRoutes from "./routes/producto.routes.js";
-
-// import pedidoRoutes from "./routes/pedido.routes.js";
-
 import cors from "cors";
-cors();
+// import pedidoRoutes from "./routes/pedido.routes.js";
 const app = express();
+app.use(cors());
 app.use(express.json());
-app.get('/' , (req , res)=>{
-res.send("hola jesu")
-})
+
 app.use("/api", productoRoutes);
 // app.use("/api/pedidos", pedidoRoutes);
 

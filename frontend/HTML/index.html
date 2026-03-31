@@ -18,16 +18,7 @@
   </head>
 
 <body>
-    <section class="hero">
-      <h1>Cafeteria Aroma</h1>
-      <div class="steam"></div>
-    <p>Donde el aroma del café acompaña tus mejores momentos</p>
-    </section>
-    <section class="hero2">
-        <h2>Bebidas calientes</h2>
-    </section>
-
-    <nav class="navbar">
+      <nav class="navbar">
      <h1>Cafeteria Aroma</h1>
         <div class="carrito">
 
@@ -38,7 +29,25 @@
         </div> 
     </nav>
 
-    <main class="menu-grid"></main>
+   
+   <main class="main-conteiner">
+    <section class="hero">
+      <h1>Cafeteria Aroma</h1>
+      <div class="steam"></div>
+    <p>Donde el aroma del café acompaña tus mejores momentos</p>
+    <!-- // -->
+    </section>
+    <!-- / -->
+    <section class="hero2 visible">
+      <!-- // -->
+        <h2>Bebidas calientes</h2>
+      <section class="conteiner-bebida-caliente"></section>
+
+    </section>
+      
+
+
+    </main>
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-card">
@@ -123,10 +132,10 @@
         />
       </svg>
     </a>
-      <script  src="../JS/index.js"></script>
-      <script  src="../JS/bebidasFrias.js"></script>
-      <script  src="../JS/bebidasCalientes.js"></script>
-      <script  src="../JS/SandwichesWraps.js"></script>
-      <script  src="../JS/.js"></script>
+      <script defer src="../JS/index.js"></script>
+      <script defer src="../JS/bebidasFrias.js"></script>
+      <script type="module" src="../JS/bebidasCalientes.js"></script>
+      <script defer src="../JS/SandwichesWraps.js"></script>
+
     </body>
 </html>
