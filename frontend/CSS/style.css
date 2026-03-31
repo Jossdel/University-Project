@@ -61,7 +61,7 @@ body::before {
   height: 100vh;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/primerFondo.png");
+    url("../img/img-main/primerFondo.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -97,7 +97,7 @@ body::before {
   padding: 100px 20px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../img/segundoFondo.png");
+    url("../img/img-main/segundoFondo.png");
   background-size: cover;
   background-position: center;
 
