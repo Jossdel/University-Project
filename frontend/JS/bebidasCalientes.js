@@ -73,8 +73,8 @@ const obtenerBebidasCalientes = async () => {
     container.appendChild(div);
   });
 
-  const next = document.querySelector(".next");
-  const prev = document.querySelector(".prev");
+  const next = document.querySelector(".next-caliente");
+  const prev = document.querySelector(".prev-caliente");
 
   next.onclick = () => {
     const itemWidth = container.querySelector(".item").clientWidth + 20;

@@ -1,14 +1,25 @@
+```html
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" sizes="32x32" href="../img/img-main/cafe-ico.ico">
-  
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/img-main/cafe-ico.ico"
+    />
     <title>Cafetería Aroma</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap"
       rel="stylesheet"
@@ -17,46 +28,48 @@
     <link rel="stylesheet" href="../CSS/style.css" />
   </head>
 
-<body>
-      <nav class="navbar">
-     <h1>Cafeteria Aroma</h1>
-        <div class="carrito">
+  <body>
+    <nav class="navbar">
+      <h1>Cafeteria Aroma</h1>
+
+      <div class="carrito">
 
           <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" fill="currentColor" class="bi bi-cart2 " viewBox="0 0 16 16">
           <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
-
-          <span class="cantidad-carrito">0</span>
-        </div> 
+        <span class="cantidad-carrito">0</span>
+      </div>
     </nav>
 
-   
-   <main class="main-conteiner">
-    <section class="hero">
-      <h1>Cafeteria Aroma</h1>
-      <div class="steam"></div>
-    <p>Donde el aroma del café acompaña tus mejores momentos</p>
-    <!-- // -->
-    </section>
-    <!-- / -->   
-<div class="icons-decoration"></div>   
- <section class="hero2 visible">
-      <!-- // -->
-     <div class="section-title">
-      <h2>Bebidas calientes</h2> 
-     </div>
-     <div class="carousel-wrapper">
-  <button class="prev">&#10094;</button>
+    <main class="main-conteiner">
+      <section class="hero">
+        <h1>Cafeteria Aroma</h1>
+        <div class="steam"></div>
+        <p>Donde el aroma del café acompaña tus mejores momentos</p>
+      </section>
 
-  <div class="container-bebida-caliente"></div>
+      <section class="hero2 visible">
+        <div class="section-title">
+          <h2>Bebidas calientes</h2>
+        </div>
 
-  <button class="next">&#10095;</button>
-</div>
+        <div class="carousel-wrapper">
+          <button class="prev-caliente">&#10094;</button>
+          <div class="container-bebida-caliente"></div>
+          <button class="next-caliente">&#10095;</button>
+        </div>
 
-    </section>
-      
+        <div class="section-title-2">
+          <h2>Bebidas frías</h2>
+        </div>
 
-
+        <div class="carousel-wrapper-2">
+          <button class="prev-fria">&#10094;</button>
+          <div class="container-bebida-fria"></div>
+          <button class="next-fria">&#10095;</button>
+        </div>
+      </section>
     </main>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-card">
@@ -127,24 +140,9 @@
       <p class="copyright">© 2026 Cafetería Aroma</p>
     </footer>
 
-    <a href="https://wa.me/18090000000" class="whatsapp-btn" target="_blank">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="40"
-        height="40"
-        fill="currentColor"
-        class="bi bi-chat-dots-fill"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-        />
-      </svg>
-    </a>
-      <script defer src="../JS/index.js"></script>
-      <script defer src="../JS/bebidasFrias.js"></script>
-      <script type="module" src="../JS/bebidasCalientes.js"></script>
-      <script defer src="../JS/SandwichesWraps.js"></script>
-
-    </body>
+    <script defer src="../JS/index.js"></script>
+    <script type="module" src="../JS/bebidasCalientes.js"></script>
+    <script type="module" src="../JS/bebidasFrias.js"></script>
+  </body>
 </html>
+```

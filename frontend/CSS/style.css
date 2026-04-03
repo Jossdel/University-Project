@@ -66,11 +66,9 @@ body::before {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding: 15px;
   color: white;
 }
@@ -91,9 +89,10 @@ body::before {
 }
 
 /* =========================
-   TITULO SECCION
+   TITULOS SECCIONES
 ========================= */
-.section-title {
+.section-title,
+.section-title-2 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -103,13 +102,15 @@ body::before {
   margin-bottom: 30px;
 }
 
-.section-title h2 {
+.section-title h2,
+.section-title-2 h2 {
   font-size: 42px;
   color: #f9edd2;
   font-family: "Playfair Display", serif;
 }
 
-.section-title p {
+.section-title p,
+.section-title-2 p {
   font-size: 16px;
   color: #f3d9b1;
   margin-top: 8px;
@@ -124,7 +125,11 @@ body::before {
   background-color: #8c623b;
 }
 
-.carousel-wrapper {
+/* =========================
+   CARRUSELES
+========================= */
+.carousel-wrapper,
+.carousel-wrapper-2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +139,8 @@ body::before {
   overflow: hidden;
 }
 
-.container-bebida-caliente {
+.container-bebida-caliente,
+.container-bebida-fria {
   display: flex;
   gap: 20px;
   overflow-x: hidden;
@@ -170,7 +176,6 @@ body::before {
 .img-cafes {
   width: 200px;
   height: 200px;
-
   border-radius: 10px;
 }
 
@@ -211,11 +216,11 @@ body::before {
   transform: scale(1.05);
 }
 
-/* =========================
-   BOTONES CARRUSEL
-========================= */
-.prev,
-.next {
+/* ========================= BOTONES CARRUSEL ========================= */
+.prev-caliente,
+.next-caliente,
+.prev-fria,
+.next-fria {
   background: #8f4f13;
   border: none;
   font-size: 20px;
@@ -224,19 +229,15 @@ body::before {
   color: #d8a563;
   height: 45px;
   width: 45px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
-
-/* =========================
-   EFECTO VAPOR
-========================= */
-.steam {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  filter: blur(20px);
-  position: absolute;
-  animation: steam 3s infinite ease-in-out;
+.prev-caliente:hover,
+.next-caliente:hover,
+.prev-fria:hover,
+.next-fria:hover {
+  background: #6f4e37;
+  transform: scale(1.1);
 }
 
 /* =========================

@@ -6,8 +6,84 @@ const obtenerBebidasFrias = async () => {
   const coldDrinks = productos.filter(
     (producto) => producto.categoria === "Bebidas frías",
   );
-  console.log(coldDrinks);
-  return coldDrinks;
+
+  const container = document.querySelector(".container-bebida-fria");
+  container.innerHTML = "";
+
+  coldDrinks.forEach((bebida) => {
+    const div = document.createElement("div");
+    div.classList.add("item");
+
+    let imagen = "";
+
+    switch (bebida.nombre.toLowerCase()) {
+      case "café frío":
+        imagen = "../img/Cafe_fotos/BebidasFrias/cafre_frio.png";
+        break;
+
+      case "frappé de café":
+        imagen = "../img/Cafe_fotos/BebidasFrias/frappe_cafe.png";
+        break;
+
+      case "batida de guineo":
+        imagen = "../img/Cafe_fotos/BebidasFrias/Batida_platano.png";
+        break;
+
+      case "jugo de naranja":
+        imagen = "../img/Cafe_fotos/BebidasFrias/jugo_naranja.png";
+        break;
+
+      case "agua natural":
+        imagen = "../img/Cafe_fotos/BebidasFrias/agua_natural.png";
+        break;
+
+      case "batida de fresa":
+        imagen = "../img/Cafe_fotos/BebidasFrias/batida_fresa.png";
+        break;
+
+      case "refresco negro":
+        imagen = "../img/Cafe_fotos/BebidasFrias/refresco_negro.png";
+        break;
+
+      default:
+        imagen = "../img/Cafe_fotos/BebidasFrias/chocolate_frio.png";
+    }
+
+    div.innerHTML = `
+      <figure class="image-box">
+        <img src="${imagen}" alt="${bebida.nombre}" class="img-cafes">
+      </figure>
+
+      <div class="info-product">
+        <h2 class="product-name">${bebida.nombre}</h2>
+        <p class="price">RD$ ${bebida.precio}</p>
+        <button class="add-button">Añadir al carrito</button>
+      </div>
+    `;
+
+    container.appendChild(div);
+  });
+
+  const next = document.querySelector(".next-fria");
+  const prev = document.querySelector(".prev-fria");
+
+  next.onclick = () => {
+    const itemWidth = container.querySelector(".item").clientWidth + 20;
+
+    container.scrollBy({
+      left: itemWidth,
+      behavior: "smooth",
+    });
+  };
+
+  prev.onclick = () => {
+    const itemWidth = container.querySelector(".item").clientWidth + 20;
+
+    container.scrollBy({
+      left: -itemWidth,
+      behavior: "smooth",
+    });
+  };
 };
 
 obtenerBebidasFrias();
