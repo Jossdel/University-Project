@@ -13,6 +13,7 @@ const obtenerBebidasCalientes = async () => {
   hotdrinks.forEach((bebida) => {
     const div = document.createElement("div");
     div.classList.add("item");
+
     let imagen = "";
 
     switch (bebida.nombre.toLowerCase()) {
@@ -58,37 +59,40 @@ const obtenerBebidasCalientes = async () => {
     }
 
     div.innerHTML = `
-  <figure >
-    <img src="${imagen}" alt="${bebida.nombre}" class="img-cafes">
-  </figure>
-  <div class="info-product">
-    <h2 class="product-name">${bebida.nombre}</h2>
-    <p class="price">RD$ ${bebida.precio}</p>
-    <button class="add-button">Añadir al carrito</button>
-  </div>
-`;
+      <figure class="image-box">
+        <img src="${imagen}" alt="${bebida.nombre}" class="img-cafes">
+      </figure>
+
+      <div class="info-product">
+        <h2 class="product-name">${bebida.nombre}</h2>
+        <p class="price">RD$ ${bebida.precio}</p>
+        <button class="add-button">Añadir al carrito</button>
+      </div>
+    `;
 
     container.appendChild(div);
   });
 
-  const itemWidth = document.querySelector(".item").offsetWidth + 20.5;
-
   const next = document.querySelector(".next");
   const prev = document.querySelector(".prev");
 
-  next.addEventListener("click", () => {
+  next.onclick = () => {
+    const itemWidth = container.querySelector(".item").clientWidth + 20;
+
     container.scrollBy({
       left: itemWidth,
       behavior: "smooth",
     });
-  });
+  };
 
-  prev.addEventListener("click", () => {
+  prev.onclick = () => {
+    const itemWidth = container.querySelector(".item").clientWidth + 20;
+
     container.scrollBy({
       left: -itemWidth,
       behavior: "smooth",
     });
-  });
+  };
 };
 
 obtenerBebidasCalientes();

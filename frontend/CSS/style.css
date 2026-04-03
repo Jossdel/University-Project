@@ -20,7 +20,7 @@ body::before {
    NAVBAR
 ========================= */
 .navbar {
-  background: #f7edbf;
+  background: #440200;
   padding: 12px 20px;
   position: fixed;
   top: 0;
@@ -33,14 +33,15 @@ body::before {
 }
 
 .navbar h1 {
-  color: rgb(55, 36, 20);
-  font-size: 45px;
+  color: #f9edd2;
+  font-size: 50px;
   font-family: "Mea Culpa", cursive;
   font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .navbar .carrito {
-  color: rgb(55, 36, 20);
+  color: #f7ebdf;
   margin-right: 40px;
   cursor: pointer;
   transition:
@@ -77,7 +78,7 @@ body::before {
 .hero h1 {
   font-size: 70px;
   font-family: "Playfair Display", serif;
-  color: rgb(247, 235, 223);
+  color: #f7ebdf;
   line-height: 1.1;
 }
 
@@ -90,32 +91,45 @@ body::before {
 }
 
 /* =========================
+   TITULO SECCION
+========================= */
+.section-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  color: #f9edd2;
+  font-family: "Playfair Display", serif;
+}
+
+.section-title p {
+  font-size: 16px;
+  color: #f3d9b1;
+  margin-top: 8px;
+}
+
+/* =========================
    HERO SECUNDARIO
 ========================= */
 .hero2 {
   min-height: 100vh;
-  padding: 100px 20px;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../img/img-main/segundoFondo.png");
-  background-size: cover;
-  background-position: center;
-
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease;
+  padding: 50px 0;
+  background-color: #8c623b;
 }
 
-.hero2.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 .carousel-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 90%;
+  width: 98%;
   margin: 40px auto;
   overflow: hidden;
 }
@@ -125,45 +139,93 @@ body::before {
   gap: 20px;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  width: 76%;
+  width: 78%;
   padding: 10px;
+  scroll-snap-type: x mandatory;
 }
 
 .item {
-  min-width: 235px;
+  min-width: 240px;
   max-width: 245px;
-  height: 320px;
-  background: white;
+  height: 360px;
+  background: #f9edd2;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
   flex-shrink: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  margin: 0;
+  scroll-snap-align: start;
 }
 
-.item figure {
-  margin: 0;
+/* =========================
+   IMAGEN PRODUCTO
+========================= */
+.image-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .img-cafes {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+
+  border-radius: 10px;
 }
 
+/* =========================
+   INFO PRODUCTO
+========================= */
+.info-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #5c3d2e;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 500;
+  color: #8c623b;
+}
+
+.add-button {
+  background-color: #5d222c;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #6f4e37;
+  transform: scale(1.05);
+}
+
+/* =========================
+   BOTONES CARRUSEL
+========================= */
 .prev,
 .next {
-  background: rgba(255, 255, 255, 0.2);
+  background: #8f4f13;
   border: none;
   font-size: 20px;
   cursor: pointer;
   border-radius: 50%;
-  color: white;
+  color: #d8a563;
   height: 45px;
   width: 45px;
 }
+
 /* =========================
    EFECTO VAPOR
 ========================= */
@@ -175,22 +237,6 @@ body::before {
   filter: blur(20px);
   position: absolute;
   animation: steam 3s infinite ease-in-out;
-}
-
-@keyframes steam {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0.8;
-  }
-
-  100% {
-    transform: translateY(-80px);
-    opacity: 0;
-  }
 }
 
 /* =========================
@@ -216,13 +262,6 @@ body::before {
   text-align: center;
   height: 130px;
   width: 220px;
-  transition: 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-card:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.08);
 }
 
 .footer-card h3 {
@@ -256,7 +295,6 @@ body::before {
   text-decoration: none;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   border-radius: 50%;
-  transition: 0.2s;
 }
 
 .whatsapp-btn svg {
