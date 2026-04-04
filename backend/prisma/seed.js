@@ -1,5 +1,5 @@
-
 import prisma from "../src/prismaClient.js";
+
 async function main() {
   const existe = await prisma.producto.count();
 
@@ -186,6 +186,37 @@ async function main() {
       {
         nombre: "empanada de queso",
         precio: 80,
+        stock: 40,
+        categoria: "Empanadas",
+      },
+      // Added 5 new empanadas
+      {
+        nombre: "empanada de carne",
+        precio: 85,
+        stock: 40,
+        categoria: "Empanadas",
+      },
+      {
+        nombre: "empanada de jamón y queso",
+        precio: 85,
+        stock: 40,
+        categoria: "Empanadas",
+      },
+      {
+        nombre: "empanada de atún con vegetales",
+        precio: 80,
+        stock: 40,
+        categoria: "Empanadas",
+      },
+      {
+        nombre: "empanada de maíz con res",
+        precio: 75,
+        stock: 40,
+        categoria: "Empanadas",
+      },
+      {
+        nombre: "empanada de pollo con queso",
+        precio: 75,
         stock: 40,
         categoria: "Empanadas",
       },

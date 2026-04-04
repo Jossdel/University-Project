@@ -5,3 +5,4 @@ window.addEventListener("scroll", () => {
     hero2.classList.add("visible");
   }
 });
+ 

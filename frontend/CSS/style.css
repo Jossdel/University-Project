@@ -139,8 +139,13 @@ body::before {
   overflow: hidden;
 }
 
+/* 🔥 AGREGADO PANADERIA + REPOSTERIA + SANDWICHES */
 .container-bebida-caliente,
-.container-bebida-fria {
+.container-bebida-fria,
+.container-empanadas,
+.container-panaderia,
+.container-reposteria,
+.container-sandwiches {
   display: flex;
   gap: 20px;
   overflow-x: hidden;
@@ -216,11 +221,22 @@ body::before {
   transform: scale(1.05);
 }
 
-/* ========================= BOTONES CARRUSEL ========================= */
+/* =========================
+   BOTONES CARRUSEL
+========================= */
+/* 🔥 AGREGADO PANADERIA + REPOSTERIA + SANDWICHES */
 .prev-caliente,
 .next-caliente,
 .prev-fria,
-.next-fria {
+.next-fria,
+.prev-empanada,
+.next-empanada,
+.prev-panaderia,
+.next-panaderia,
+.prev-reposteria,
+.next-reposteria,
+.prev-sandwich,
+.next-sandwich {
   background: #8f4f13;
   border: none;
   font-size: 20px;
@@ -232,10 +248,19 @@ body::before {
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
+
 .prev-caliente:hover,
 .next-caliente:hover,
 .prev-fria:hover,
-.next-fria:hover {
+.next-fria:hover,
+.prev-empanada:hover,
+.next-empanada:hover,
+.prev-panaderia:hover,
+.next-panaderia:hover,
+.prev-reposteria:hover,
+.next-reposteria:hover,
+.prev-sandwich:hover,
+.next-sandwich:hover {
   background: #6f4e37;
   transform: scale(1.1);
 }
