@@ -33,6 +33,19 @@ const obtenerSandwichesWraps = async () => {
         imagen = "../img/Cafe_fotos/Sandwiches y wraps/panini_pollo.png";
         break;
 
+      // 🔥 NUEVOS
+      case "burritos de res":
+        imagen = "../img/Cafe_fotos/Sandwiches y wraps/burritos_res.png";
+        break;
+
+      case "tacos":
+        imagen = "../img/Cafe_fotos/Sandwiches y wraps/tacos.png";
+        break;
+
+      case "hotdog":
+        imagen = "../img/Cafe_fotos/Sandwiches y wraps/hotdog.png";
+        break;
+
       default:
         imagen = "../img/Cafe_fotos/Sandwiches y wraps/default.png";
     }

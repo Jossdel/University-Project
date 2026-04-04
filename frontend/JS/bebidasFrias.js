@@ -45,6 +45,14 @@ const obtenerBebidasFrias = async () => {
         imagen = "../img/Cafe_fotos/BebidasFrias/refresco_negro.png";
         break;
 
+      case "limonadas":
+        imagen = "../img/Cafe_fotos/BebidasFrias/limonadas.png";
+        break;
+
+      case "cerveza":
+        imagen = "../img/Cafe_fotos/BebidasFrias/cerverza.png";
+        break;
+
       default:
         imagen = "../img/Cafe_fotos/BebidasFrias/chocolate_frio.png";
     }

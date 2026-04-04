@@ -26,9 +26,9 @@ const obtenerBebidasCalientes = async () => {
         imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_latte.png";
         break;
 
-      case "capuccino":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/cappuccino.png";
-        break;
+      case "cappuccino":
+        imagen = "../img/Cafe_fotos/BebidasCalientes/Cappuccino.png";
+      break;
 
       case "café negro":
         imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_negro.png";

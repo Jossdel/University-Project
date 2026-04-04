@@ -17,29 +17,57 @@ const obtenerReposteria = async () => {
     let imagen = "";
 
     switch (postre.nombre.toLowerCase()) {
-      case "dona de fresa":
-        imagen = "../img/Cafe_fotos/Repostería/dona_fresa.png";
-        break;
+  case "dona de fresa":
+    imagen = "../img/Cafe_fotos/Repostería/dona_fresa.png";
+    break;
 
-      case "dona de chocolate":
-        imagen = "../img/Cafe_fotos/Repostería/dona_chocolate.png";
-        break;
+  case "dona de chocolate":
+    imagen = "../img/Cafe_fotos/Repostería/dona_chocolate.png";
+    break;
 
-      case "brownies":
-        imagen = "../img/Cafe_fotos/Repostería/brownies.png";
-        break;
+  case "brownies":
+    imagen = "../img/Cafe_fotos/Repostería/brownies.png";
+    break;
 
-      case "cheesecake":
-        imagen = "../img/Cafe_fotos/Repostería/cheesecake.png";
-        break;
+  case "cheesecake":
+    imagen = "../img/Cafe_fotos/Repostería/cheesecake.png";
+    break;
 
-      case "galletas":
-        imagen = "../img/Cafe_fotos/Repostería/galletas.png";
-        break;
+  case "galletas":
+    imagen = "../img/Cafe_fotos/Repostería/galletas.png";
+    break;
 
-      default:
-        imagen = "../img/Cafe_fotos/Repostería/galletas.png";
-    }
+  case "churros":
+    imagen = "../img/Cafe_fotos/Repostería/churro.png";
+    break;
+
+  case "cupcakes":
+    imagen = "../img/Cafe_fotos/Repostería/cupcakes.png";
+    break;
+
+  case "tarta de frutas":
+    imagen = "../img/Cafe_fotos/Repostería/tarta_frutas.png";
+    break;
+
+  case "tres leches":
+    imagen = "../img/Cafe_fotos/Repostería/tres_leche.png";
+    break;
+
+  case "flan":
+    imagen = "../img/Cafe_fotos/Repostería/flan.png";
+    break;
+
+  case "fresa con crema":
+    imagen = "../img/Cafe_fotos/Repostería/fresa_con_crema.png";
+    break;
+
+  case "arroz con leche":
+    imagen = "../img/Cafe_fotos/Repostería/arroz_con_leche.png";
+    break;
+
+  default:
+    imagen = "../img/Cafe_fotos/Repostería/galletas.png";
+}
 
     div.innerHTML = `
       <figure class="image-box">

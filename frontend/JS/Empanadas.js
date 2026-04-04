@@ -31,11 +31,11 @@ const obtenerEmpanadas = async () => {
 
   // 🔥 NUEVAS EMPANADAS
   case "empanada de carne":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_yuca.png";
+    imagen = "../img/Cafe_fotos/Empanadas/empanada_carne.png";
     break;
 
   case "empanada de jamón y queso":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_jamon_queso.png";
+    imagen = "../img/Cafe_fotos/Empanadas/empanada_jamon_y_queso.png";
     break;
 
   case "empanada de atún":
@@ -48,6 +48,10 @@ const obtenerEmpanadas = async () => {
 
   case "empanada de pollo con queso":
     imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo_queso.png";
+    break;
+
+  case "empanada de yuca":
+    imagen = "../img/Cafe_fotos/Empanadas/empanada_yuca.png";
     break;
 
   default:
