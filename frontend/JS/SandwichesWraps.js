@@ -17,37 +17,37 @@ const obtenerSandwichesWraps = async () => {
     let imagen = "";
 
     switch (item.nombre.toLowerCase()) {
-      case "sandwich de jamón y queso":
-        imagen = "../img/Cafe_fotos/Sandwiches y wraps/sandwich_jamón_queso.png";
+      case "jamon queso":
+        imagen =
+          "../img/Cafe_fotos/Sandwiches_y_wraps/sandwich_jamon_queso.png";
         break;
 
-      case "wrap de pollo":
-        imagen = "../img/Cafe_fotos/Sandwiches y wraps/wrap_pollo.png";
+      case "wrap pollo":
+        imagen = "../img/Cafe_fotos/Sandwiches_y_wraps/wrap_pollo.png";
         break;
 
-      case "sandwich club":
-        imagen = "../img/Cafe_fotos/Sandwiches y wraps/sandwich_club.png";
+      case "club":
+        imagen = "../img/Cafe_fotos/Sandwiches_y_wraps/sandwich_club.png";
         break;
 
-      case "panini de pollo":
-        imagen = "../img/Cafe_fotos/Sandwiches y wraps/panini_pollo.png";
+      case "panini":
+        imagen = "../img/Cafe_fotos/Sandwiches_y_wraps/panini_pollo.png";
         break;
 
-      // 🔥 NUEVOS
-      case "burritos de res":
-        imagen = "../img/Cafe_fotos/Sandwiches y wraps/burritos_res.png";
+      case "burrito":
+        imagen = "../img/Cafe_fotos/Sandwiches_y_wraps/burritos_res.png";
         break;
 
       case "tacos":
-        imagen = "../img/Cafe_fotos/Sandwiches y wraps/tacos.png";
+        imagen = "../img/Cafe_fotos/Sandwiches_y_wraps/tacos.png";
         break;
 
       case "hotdog":
-        imagen = "../img/Cafe_fotos/Sandwiches y wraps/hotdog.png";
+        imagen = "../img/Cafe_fotos/Sandwiches_y_wraps/hotdog.png";
         break;
 
       default:
-        imagen = "../img/Cafe_fotos/Sandwiches y wraps/default.png";
+        imagen = "../img/Cafe_fotos/Sandwiches_y_wraps/default.png";
     }
 
     div.innerHTML = `
@@ -58,7 +58,7 @@ const obtenerSandwichesWraps = async () => {
       <div class="info-product">
         <h2 class="product-name">${item.nombre}</h2>
         <p class="price">RD$ ${item.precio}</p>
-        <button class="add-button">Añadir al carrito</button>
+        <button class="add-button">Anadir al carrito</button>
       </div>
     `;
 

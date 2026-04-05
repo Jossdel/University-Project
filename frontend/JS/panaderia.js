@@ -4,7 +4,7 @@ const obtenerPanaderia = async () => {
   const productos = await apiValues();
 
   const panes = productos.filter(
-    (producto) => producto.categoria === "Panadería",
+    (producto) => producto.categoria === "Panaderia",
   );
 
   const container = document.querySelector(".container-panaderia");
@@ -17,49 +17,48 @@ const obtenerPanaderia = async () => {
     let imagen = "";
 
     switch (pan.nombre.toLowerCase()) {
-      case "croissants":
-        imagen = "../img/Cafe_fotos/Panadería/Croissants.png";
+      case "croissant":
+        imagen = "../img/Cafe_fotos/Panaderia/Croissants.png";
         break;
 
-      case "pan de agua":
-        imagen = "../img/Cafe_fotos/Panadería/pan_agua.png";
+      case "pan agua":
+        imagen = "../img/Cafe_fotos/Panaderia/pan_agua.png";
         break;
 
-      case "pan integral":
-        imagen = "../img/Cafe_fotos/Panadería/Pan_Integral.png";
+      case "integral":
+        imagen = "../img/Cafe_fotos/Panaderia/Pan_Integral.png";
         break;
 
-      case "muffins":
-        imagen = "../img/Cafe_fotos/Panadería/Muffin.png";
+      case "muffin":
+        imagen = "../img/Cafe_fotos/Panaderia/Muffin.png";
         break;
 
-      // 🔥 NUEVOS PANES
       case "baguette":
-        imagen = "../img/Cafe_fotos/Panadería/baguette.png";
+        imagen = "../img/Cafe_fotos/Panaderia/baguette.png";
         break;
 
-      case "pan de ajo":
-        imagen = "../img/Cafe_fotos/Panadería/pan_ajo.png";
+      case "pan ajo":
+        imagen = "../img/Cafe_fotos/Panaderia/pan_ajo.png";
         break;
 
-      case "pan de avena":
-        imagen = "../img/Cafe_fotos/Panadería/pan_avena.png";
+      case "pan avena":
+        imagen = "../img/Cafe_fotos/Panaderia/pan_avena.png";
         break;
 
-      case "pan de centeno":
-        imagen = "../img/Cafe_fotos/Panadería/pan_centeno.png";
+      case "centeno":
+        imagen = "../img/Cafe_fotos/Panaderia/pan_centeno.png";
         break;
 
-      case "pan pepin":
-        imagen = "../img/Cafe_fotos/Panadería/pan_pepin.png";
+      case "pepin":
+        imagen = "../img/Cafe_fotos/Panaderia/pan_pepin.png";
         break;
 
-      case "pan pita":
-        imagen = "../img/Cafe_fotos/Panadería/pan_pita.png";
+      case "pita":
+        imagen = "../img/Cafe_fotos/Panaderia/pan_pita.png";
         break;
 
       default:
-        imagen = "../img/Cafe_fotos/Panadería/pan_agua.png";
+        imagen = "../img/Cafe_fotos/Panaderia/pan_agua.png";
     }
 
     div.innerHTML = `

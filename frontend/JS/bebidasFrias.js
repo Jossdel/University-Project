@@ -4,7 +4,7 @@ const obtenerBebidasFrias = async () => {
   const productos = await apiValues();
 
   const coldDrinks = productos.filter(
-    (producto) => producto.categoria === "Bebidas frías",
+    (producto) => producto.categoria === "Bebidas frias",
   );
 
   const container = document.querySelector(".container-bebida-fria");
@@ -17,35 +17,35 @@ const obtenerBebidasFrias = async () => {
     let imagen = "";
 
     switch (bebida.nombre.toLowerCase()) {
-      case "café frío":
+      case "cafe frio":
         imagen = "../img/Cafe_fotos/BebidasFrias/cafre_frio.png";
         break;
 
-      case "frappé de café":
+      case "frappe":
         imagen = "../img/Cafe_fotos/BebidasFrias/frappe_cafe.png";
         break;
 
-      case "batida de guineo":
+      case "batida guineo":
         imagen = "../img/Cafe_fotos/BebidasFrias/Batida_platano.png";
         break;
 
-      case "jugo de naranja":
+      case "jugo naranja":
         imagen = "../img/Cafe_fotos/BebidasFrias/jugo_naranja.png";
         break;
 
-      case "agua natural":
+      case "agua":
         imagen = "../img/Cafe_fotos/BebidasFrias/agua_natural.png";
         break;
 
-      case "batida de fresa":
+      case "batida fresa":
         imagen = "../img/Cafe_fotos/BebidasFrias/batida_fresa.png";
         break;
 
-      case "refresco negro":
+      case "refresco":
         imagen = "../img/Cafe_fotos/BebidasFrias/refresco_negro.png";
         break;
 
-      case "limonadas":
+      case "limonada":
         imagen = "../img/Cafe_fotos/BebidasFrias/limonadas.png";
         break;
 

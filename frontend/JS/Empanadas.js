@@ -16,48 +16,46 @@ const obtenerEmpanadas = async () => {
 
     let imagen = "";
 
-  switch (empanada.nombre.toLowerCase()) {
-  case "empanada de pollo":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo.png";
-    break;
+    switch (empanada.nombre.toLowerCase()) {
+      case "pollo":
+        imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo.png";
+        break;
 
-  case "empanada de pizza":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_pizza.png";
-    break;
+      case "pizza":
+        imagen = "../img/Cafe_fotos/Empanadas/empanada_pizza.png";
+        break;
 
-  case "empanada de queso":
-    imagen = "../img/Cafe_fotos/Empanadas/Empanadas_queso.png";
-    break;
+      case "queso":
+        imagen = "../img/Cafe_fotos/Empanadas/Empanadas_queso.png";
+        break;
 
-  // 🔥 NUEVAS EMPANADAS
-  case "empanada de carne":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_carne.png";
-    break;
+      case "carne":
+        imagen = "../img/Cafe_fotos/Empanadas/empanada_carne.png";
+        break;
 
-  case "empanada de jamón y queso":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_jamon_y_queso.png";
-    break;
+      case "jamon queso":
+        imagen = "../img/Cafe_fotos/Empanadas/empanada_jamon_y_queso.png";
+        break;
 
-  case "empanada de atún":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_atun.png";
-    break;
+      case "atun":
+        imagen = "../img/Cafe_fotos/Empanadas/empanada_atun.png";
+        break;
 
-  case "empanada de maíz con res":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_maíz_res.png";
-    break;
+      case "maiz res":
+        imagen = "../img/Cafe_fotos/Empanadas/empanada_maíz_res.png";
+        break;
 
-  case "empanada de pollo con queso":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo_queso.png";
-    break;
+      case "pollo queso":
+        imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo_queso.png";
+        break;
 
-  case "empanada de yuca":
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_yuca.png";
-    break;
+      case "yuca":
+        imagen = "../img/Cafe_fotos/Empanadas/empanada_yuca.png";
+        break;
 
-  default:
-    imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo.png";
-}
-
+      default:
+        imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo.png";
+    }
     div.innerHTML = `
       <figure class="image-box">
         <img src="${imagen}" alt="${empanada.nombre}" class="img-cafes">

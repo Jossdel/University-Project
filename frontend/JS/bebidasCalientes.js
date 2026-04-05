@@ -18,7 +18,6 @@ const obtenerBebidasCalientes = async () => {
 
     switch (bebida.nombre.toLowerCase()) {
       case "espresso":
-      case "café espresso":
         imagen = "../img/Cafe_fotos/BebidasCalientes/Espresso.png";
         break;
 
@@ -26,38 +25,37 @@ const obtenerBebidasCalientes = async () => {
         imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_latte.png";
         break;
 
-      case "cappuccino":
+      case "capuccino":
         imagen = "../img/Cafe_fotos/BebidasCalientes/Cappuccino.png";
-      break;
+        break;
 
-      case "café negro":
+      case "cafe negro":
         imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_negro.png";
         break;
 
-      case "café con leche":
+      case "cafe leche":
         imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_leche.png";
         break;
 
-      case "té de manzanilla":
+      case "manzanilla":
         imagen = "../img/Cafe_fotos/BebidasCalientes/Te_manzanilla.png";
         break;
 
-      case "té verde":
+      case "te verde":
         imagen = "../img/Cafe_fotos/BebidasCalientes/Te_verde.png";
         break;
 
-      case "café":
+      case "cafe":
         imagen = "../img/Cafe_fotos/BebidasCalientes/cafe.png";
         break;
 
-      case "mocaccino":
+      case "mocca":
         imagen = "../img/Cafe_fotos/BebidasCalientes/mocaccino.png";
         break;
 
       default:
         imagen = "../img/Cafe_fotos/BebidasCalientes/chocolate_caliente.png";
     }
-
     div.innerHTML = `
       <figure class="image-box">
         <img src="${imagen}" alt="${bebida.nombre}" class="img-cafes">
