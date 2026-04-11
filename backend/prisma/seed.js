@@ -203,11 +203,6 @@ async function main() {
       { nombre: "Maiz Res", precio: 75, stock: 40, categoria: "Empanadas" },
       { nombre: "Pollo Queso", precio: 75, stock: 40, categoria: "Empanadas" },
       { nombre: "Yuca", precio: 80, stock: 40, categoria: "Empanadas" },
-
-      // Extras
-      { nombre: "Papas", precio: 100, stock: 30, categoria: "Extras" },
-      { nombre: "Yogurt", precio: 90, stock: 20, categoria: "Extras" },
-      { nombre: "Granola", precio: 110, stock: 20, categoria: "Extras" },
     ],
   });
 }
