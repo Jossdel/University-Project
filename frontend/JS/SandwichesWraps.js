@@ -58,7 +58,6 @@ const obtenerSandwichesWraps = async () => {
       <div class="info-product">
         <h2 class="product-name">${item.nombre}</h2>
         <p class="price">RD$ ${item.precio}</p>
-        <button class="add-button">Anadir al carrito</button>
       </div>
     `;
 

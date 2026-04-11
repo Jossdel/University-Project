@@ -1,96 +1,111 @@
 import { apiValues } from "./api.js";
+import { agregarAlCarrito } from "./carrito.js";
 
 const obtenerBebidasCalientes = async () => {
-  let productos = await apiValues();
+  try {
+    const productos = await apiValues();
 
-  const hotdrinks = productos.filter(
-    (producto) => producto.categoria === "Bebidas calientes",
-  );
+    const hotdrinks = productos.filter(
+      (producto) => producto.categoria === "Bebidas calientes",
+    );
 
-  const container = document.querySelector(".container-bebida-caliente");
-  container.innerHTML = "";
+    const container = document.querySelector(".container-bebida-caliente");
+    container.innerHTML = "";
 
-  hotdrinks.forEach((bebida) => {
-    const div = document.createElement("div");
-    div.classList.add("item");
+    hotdrinks.forEach((bebida) => {
+      const div = document.createElement("div");
+      div.classList.add("item");
 
-    let imagen = "";
+      let imagen = "";
 
-    switch (bebida.nombre.toLowerCase()) {
-      case "espresso":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/Espresso.png";
-        break;
+      switch (bebida.nombre.toLowerCase()) {
+        case "espresso":
+          imagen = "../img/Cafe_fotos/BebidasCalientes/Espresso.png";
+          break;
+        case "latte":
+          imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_latte.png";
+          break;
+        case "capuccino":
+          imagen = "../img/Cafe_fotos/BebidasCalientes/Cappuccino.png";
+          break;
+        case "cafe negro":
+          imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_negro.png";
+          break;
+        case "cafe leche":
+          imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_leche.png";
+          break;
+        case "manzanilla":
+          imagen = "../img/Cafe_fotos/BebidasCalientes/Te_manzanilla.png";
+          break;
+        case "te verde":
+          imagen = "../img/Cafe_fotos/BebidasCalientes/Te_verde.png";
+          break;
+        case "cafe":
+          imagen = "../img/Cafe_fotos/BebidasCalientes/cafe.png";
+          break;
+        case "mocca":
+          imagen = "../img/Cafe_fotos/BebidasCalientes/mocaccino.png";
+          break;
+        default:
+          imagen = "../img/Cafe_fotos/BebidasCalientes/chocolate_caliente.png";
+      }
 
-      case "latte":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_latte.png";
-        break;
+      div.innerHTML = `
+        <figure class="image-box">
+          <img src="${imagen}" alt="${bebida.nombre}" class="img-cafes">
+        </figure>
 
-      case "capuccino":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/Cappuccino.png";
-        break;
+        <div class="info-product">
+          <h2 class="product-name">${bebida.nombre}</h2>
+          <p class="price">RD$ ${bebida.precio}</p>
+          <button class="add-button">Añadir al carrito</button>
+        </div>
+      `;
 
-      case "cafe negro":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_negro.png";
-        break;
+      // 🔥 BOTÓN FUNCIONAL DEL CARRITO
+      const boton = div.querySelector(".add-button");
 
-      case "cafe leche":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_leche.png";
-        break;
+      boton.addEventListener("click", () => {
+        agregarAlCarrito(bebida);
+      });
 
-      case "manzanilla":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/Te_manzanilla.png";
-        break;
+      container.appendChild(div);
+    });
 
-      case "te verde":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/Te_verde.png";
-        break;
+    // =========================
+    // CARRUSEL
+    // =========================
+    const next = document.querySelector(".next-caliente");
+    const prev = document.querySelector(".prev-caliente");
 
-      case "cafe":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/cafe.png";
-        break;
+    if (next && prev) {
+      next.onclick = () => {
+        const item = container.querySelector(".item");
+        if (!item) return;
 
-      case "mocca":
-        imagen = "../img/Cafe_fotos/BebidasCalientes/mocaccino.png";
-        break;
+        const itemWidth = item.clientWidth + 20;
 
-      default:
-        imagen = "../img/Cafe_fotos/BebidasCalientes/chocolate_caliente.png";
+        container.scrollBy({
+          left: itemWidth,
+          behavior: "smooth",
+        });
+      };
+
+      prev.onclick = () => {
+        const item = container.querySelector(".item");
+        if (!item) return;
+
+        const itemWidth = item.clientWidth + 20;
+
+        container.scrollBy({
+          left: -itemWidth,
+          behavior: "smooth",
+        });
+      };
     }
-    div.innerHTML = `
-      <figure class="image-box">
-        <img src="${imagen}" alt="${bebida.nombre}" class="img-cafes">
-      </figure>
-
-      <div class="info-product">
-        <h2 class="product-name">${bebida.nombre}</h2>
-        <p class="price">RD$ ${bebida.precio}</p>
-        <button class="add-button">Añadir al carrito</button>
-      </div>
-    `;
-
-    container.appendChild(div);
-  });
-
-  const next = document.querySelector(".next-caliente");
-  const prev = document.querySelector(".prev-caliente");
-
-  next.onclick = () => {
-    const itemWidth = container.querySelector(".item").clientWidth + 20;
-
-    container.scrollBy({
-      left: itemWidth,
-      behavior: "smooth",
-    });
-  };
-
-  prev.onclick = () => {
-    const itemWidth = container.querySelector(".item").clientWidth + 20;
-
-    container.scrollBy({
-      left: -itemWidth,
-      behavior: "smooth",
-    });
-  };
+  } catch (error) {
+    console.error("Error cargando bebidas calientes:", error);
+  }
 };
 
 obtenerBebidasCalientes();
