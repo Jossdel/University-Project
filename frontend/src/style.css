@@ -314,7 +314,7 @@ body::before {
 
 #btn-cancelar,
 #btn-comprar {
-  flex: 3; /* 🔥 cada botón ocupa todo el espacio disponible */
+  flex: 3; /* cada botón ocupa todo el espacio disponible */
   background-color: #53222a;
   color: white;
   border: none;

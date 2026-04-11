@@ -1,0 +1,390 @@
+/* =========================
+   RESET GENERAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: #440200;
+  padding: 12px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar h1 {
+  color: #f9edd2;
+  font-size: 50px;
+  font-family: "Mea Culpa", cursive;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.navbar .carrito {
+  color: #f7ebdf;
+  margin-right: 40px;
+  cursor: pointer;
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.navbar .carrito:hover {
+  color: rgb(96, 85, 75);
+  transform: scale(1.2);
+}
+
+/* CONTADOR */
+#contador {
+  background: rgb(161, 115, 29);
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 100%;
+  position: absolute;
+  top: -7.5px;
+  right: -14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  font-size: x-small;
+  width: 25px;
+}
+
+/* =========================
+   HERO PRINCIPAL
+========================= */
+.hero {
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/img-main/primerFondo.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 150px;
+  font-family: "Playfair Display", serif;
+  color: #f8e3a8cc;
+}
+
+.hero p {
+  font-size: 50px;
+  margin-top: 20px;
+  color: #f8e3a8cc;
+  max-width: 1100px;
+}
+
+/* =========================
+   TITULOS
+========================= */
+.section-title,
+.section-title-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0 30px;
+}
+
+.section-title h2,
+.section-title-2 h2 {
+  font-size: 42px;
+  color: #f9edd2;
+}
+
+/* =========================
+   HERO SECUNDARIO
+========================= */
+.hero2 {
+  min-height: 100vh;
+  padding: 50px 0;
+  background-image:
+    linear-gradient(#8c623bcc, rgba(140, 98, 59, 0.8)),
+    url("../img/img-main/segundoFondo.png");
+}
+
+/* =========================
+   CARRITO PANEL
+========================= */
+.carrito-panel {
+  position: fixed;
+  top: 70px;
+  right: -350px;
+  width: 320px;
+  height: calc(100% - 70px);
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.carrito-panel.activo {
+  right: 0;
+}
+
+.carrito-panel h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #5c3d2e;
+}
+
+/* ITEMS */
+.item-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  font-size: 14px;
+}
+
+.item-carrito span:first-child {
+  flex: 1;
+}
+
+.item-carrito span:nth-child(2) {
+  color: #8c623b;
+  font-weight: bold;
+}
+
+/* BOTON ELIMINAR */
+.eliminar {
+  cursor: pointer;
+  color: rgb(240, 240, 240);
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  background-color: red;
+  padding: 4px 9px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  P {
+    font-size: 15px;
+  }
+}
+
+.eliminar:hover {
+  transform: scale(1.2);
+}
+
+/* TOTAL */
+#total {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #5c3d2e;
+}
+
+/* SCROLL */
+.carrito-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.carrito-panel::-webkit-scrollbar-thumb {
+  background: #8c623b;
+  border-radius: 10px;
+}
+
+/* =========================
+   CARRUSELES
+========================= */
+.carousel-wrapper,
+.carousel-wrapper-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 98%;
+  margin: 40px auto;
+}
+
+.container-bebida-caliente,
+.container-bebida-fria,
+.container-empanadas,
+.container-panaderia,
+.container-reposteria,
+.container-sandwiches {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  width: 78%;
+  padding: 10px;
+}
+
+/* ITEM */
+.item {
+  min-width: 240px;
+  height: 390px;
+  background: #f9edd2;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   PRODUCTO
+========================= */
+.image-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.img-cafes {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.info-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-name {
+  font-size: 20px;
+  color: #5c3d2e;
+  font-size: x-large;
+}
+
+.price {
+  color: #8c623b;
+  font-weight: 800;
+  font-size: x-large;
+}
+
+.add-button {
+  background-color: #5d222c;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #6f4e37;
+  transform: scale(1.05);
+}
+.botones-carrito {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+#btn-cancelar,
+#btn-comprar {
+  flex: 3; /* cada botón ocupa todo el espacio disponible */
+  background-color: #53222a;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 45px;
+}
+/* =========================
+   BOTONES
+========================= */
+.prev-caliente,
+.next-caliente,
+.prev-fria,
+.next-fria,
+.prev-empanada,
+.next-empanada,
+.prev-panaderia,
+.next-panaderia,
+.prev-reposteria,
+.next-reposteria,
+.prev-sandwich,
+.next-sandwich {
+  background: #610f0f;
+  border: none;
+  border-radius: 50%;
+  color: #d8a563;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+}
+
+.prev-caliente:hover,
+.next-caliente:hover {
+  background: #6f4e37;
+  transform: scale(1.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: rgba(55, 36, 20);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 12px;
+  width: 200px;
+}
+
+.footer-card h3 {
+  color: rgb(190, 115, 58);
+}
+
+.footer-card p {
+  color: #a89370;
+}
+
+.copyright {
+  margin-top: 20px;
+  color: #cfccc9;
+}
