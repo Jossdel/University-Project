@@ -17,6 +17,15 @@ model Producto {
 
   detalles  DetallePedido[]
 }
+model User {
+  id        Int     @id @default(autoincrement())
+  nombre    String
+  apellido  String
+  email     String  @unique
+  password  String
+  avatar    String?
+  createdAt DateTime @default(now())
+}
 
 model Pedido {
   id        Int              @id @default(autoincrement())
