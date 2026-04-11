@@ -5,7 +5,7 @@ import {
   obtenerProductos,
   eliminarTodosProductos,
 } from "../controllers/producto.controller.js";
-import { crearUsuario } from "../controllers/users.controller.js";
+import { crearUsuario, loginUsuario } from "../controllers/users.controller.js";
 
 const router = Router();
 
