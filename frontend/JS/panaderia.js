@@ -30,7 +30,7 @@ const obtenerPanaderia = async () => {
         break;
 
       case "muffin":
-        imagen = "img/Cafe_fotos/Panaderia/Muffin.png";
+        imagen = "img/Cafe_fotos/Panaderia/muffin.png";
         break;
 
       case "baguette":

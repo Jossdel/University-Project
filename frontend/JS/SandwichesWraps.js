@@ -18,8 +18,7 @@ const obtenerSandwichesWraps = async () => {
 
     switch (item.nombre.toLowerCase()) {
       case "jamon queso":
-        imagen =
-          "/img/Cafe_fotos/Sandwiches_y_wraps/sandwich_jamon_queso.png";
+        imagen = "/img/Cafe_fotos/Sandwiches_y_wraps/sandwich_jamon_queso.png";
         break;
 
       case "wrap pollo":
@@ -27,8 +26,7 @@ const obtenerSandwichesWraps = async () => {
         break;
 
       case "club":
-        imagen =
-          "/img/Cafe_fotos/Sandwiches_y_wraps/sandwich_club.png";
+        imagen = "/img/Cafe_fotos/Sandwiches_y_wraps/sandwich_club.png";
         break;
 
       case "panini":
@@ -59,6 +57,7 @@ const obtenerSandwichesWraps = async () => {
       <div class="info-product">
         <h2 class="product-name">${item.nombre}</h2>
         <p class="price">RD$ ${item.precio}</p>
+        <button class="add-button">Añadir al carrito</button>
       </div>
     `;
 
