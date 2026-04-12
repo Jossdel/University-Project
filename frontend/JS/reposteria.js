@@ -18,55 +18,55 @@ const obtenerReposteria = async () => {
 
     switch (postre.nombre.toLowerCase()) {
       case "dona fresa":
-        imagen = "../img/Cafe_fotos/Reposteria/dona_fresa.png";
+        imagen = "../public/img/Cafe_fotos/Reposteria/dona_fresa.png";
         break;
 
       case "dona chocolate":
-        imagen = "../img/Cafe_fotos/Reposteria/dona_chocolate.png";
+        imagen = "../public/img/Cafe_fotos/Reposteria/dona_chocolate.png";
         break;
 
       case "brownie":
-        imagen = "../img/Cafe_fotos/Reposteria/brownies.png";
+        imagen = "../public/img/Cafe_fotos/Reposteria/brownies.png";
         break;
 
       case "cheesecake":
-        imagen = "../img/Cafe_fotos/Reposteria/cheesecake.png";
+        imagen = "../public/img/Cafe_fotos/Reposteria/cheesecake.png";
         break;
 
       case "galletas":
-        imagen = "../img/Cafe_fotos/Reposteria/galletas.png";
+        imagen = "../public/img/Cafe_fotos/Reposteria/galletas.png";
         break;
 
       case "churros":
-        imagen = "../img/Cafe_fotos/Reposteria/churro.png";
+        imagen = "../public/img/Cafe_fotos/Reposteria/churro.png";
         break;
 
       case "cupcake":
-        imagen = "../img/Cafe_fotos/Reposteria/cupcakes.png";
+        imagen = "../public/img/Cafe_fotos/Reposteria/cupcakes.png";
         break;
 
       case "tarta frutas":
-        imagen = "../img/Cafe_fotos/Reposteria/tarta_frutas.png";
+        imagen = "../public/img/Cafe_fotos/Reposteria/tarta_frutas.png";
         break;
 
       case "tres leches":
-        imagen = "../img/Cafe_fotos/Reposteria/tres_leche.png";
+        imagen = "/img/Cafe_fotos/Reposteria/tres_leche.png";
         break;
 
       case "flan":
-        imagen = "../img/Cafe_fotos/Reposteria/flan.png";
+        imagen = "/img/Cafe_fotos/Reposteria/flan.png";
         break;
 
       case "fresa crema":
-        imagen = "../img/Cafe_fotos/Reposteria/fresa_con_crema.png";
+        imagen = "/img/Cafe_fotos/Reposteria/fresa_con_crema.png";
         break;
 
       case "arroz leche":
-        imagen = "../img/Cafe_fotos/Reposteria/arroz_con_leche.png";
+        imagen = "/img/Cafe_fotos/Reposteria/arroz_con_leche.png";
         break;
 
       default:
-        imagen = "../img/Cafe_fotos/Reposteria/galletas.png";
+        imagen = "/img/Cafe_fotos/Reposteria/galletas.png";
     }
 
     div.innerHTML = `

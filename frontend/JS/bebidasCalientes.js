@@ -10,6 +10,13 @@ const obtenerBebidasCalientes = async () => {
     );
 
     const container = document.querySelector(".container-bebida-caliente");
+
+    // Validación por si no encuentra el contenedor
+    if (!container) {
+      console.error("No se encontró el contenedor .container-bebida-caliente");
+      return;
+    }
+
     container.innerHTML = "";
 
     hotdrinks.forEach((bebida) => {
@@ -18,36 +25,36 @@ const obtenerBebidasCalientes = async () => {
 
       let imagen = "";
 
-      switch (bebida.nombre.toLowerCase()) {
+      switch (bebida.nombre.toLowerCase().trim()) {
         case "espresso":
-          imagen = "../img/Cafe_fotos/BebidasCalientes/Espresso.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/espresso.png";
           break;
         case "latte":
-          imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_latte.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/cafe_latte.png";
           break;
         case "capuccino":
-          imagen = "../img/Cafe_fotos/BebidasCalientes/Cappuccino.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/cappuccino.png";
           break;
         case "cafe negro":
-          imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_negro.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/cafe_negro.png";
           break;
         case "cafe leche":
-          imagen = "../img/Cafe_fotos/BebidasCalientes/cafe_leche.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/cafe_leche.png";
           break;
         case "manzanilla":
-          imagen = "../img/Cafe_fotos/BebidasCalientes/Te_manzanilla.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/te_manzanilla.png";
           break;
         case "te verde":
-          imagen = "../img/Cafe_fotos/BebidasCalientes/Te_verde.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/te_verde.png";
           break;
         case "cafe":
-          imagen = "../img/Cafe_fotos/BebidasCalientes/cafe.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/cafe.png";
           break;
         case "mocca":
-          imagen = "../img/Cafe_fotos/BebidasCalientes/mocaccino.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/mocaccino.png";
           break;
         default:
-          imagen = "../img/Cafe_fotos/BebidasCalientes/chocolate_caliente.png";
+          imagen = "/img/Cafe_fotos/BebidasCalientes/chocolate_caliente.png";
       }
 
       div.innerHTML = `
@@ -62,7 +69,6 @@ const obtenerBebidasCalientes = async () => {
         </div>
       `;
 
-      // 🔥 BOTÓN FUNCIONAL DEL CARRITO
       const boton = div.querySelector(".add-button");
 
       boton.addEventListener("click", () => {
@@ -93,6 +99,8 @@ const obtenerBebidasCalientes = async () => {
 
       prev.onclick = () => {
         const item = container.querySelector(".item");
+        hotdrinkso;
+
         if (!item) return;
 
         const itemWidth = item.clientWidth + 20;

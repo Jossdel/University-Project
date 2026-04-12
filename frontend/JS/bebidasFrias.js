@@ -18,43 +18,43 @@ const obtenerBebidasFrias = async () => {
 
     switch (bebida.nombre.toLowerCase()) {
       case "cafe frio":
-        imagen = "../img/Cafe_fotos/BebidasFrias/cafre_frio.png";
+        imagen = "../public/img/Cafe_fotos/BebidasFrias/cafre_frio.png";
         break;
 
       case "frappe":
-        imagen = "../img/Cafe_fotos/BebidasFrias/frappe_cafe.png";
+        imagen = "../public/img/Cafe_fotos/BebidasFrias/frappe_cafe.png";
         break;
 
       case "batida guineo":
-        imagen = "../img/Cafe_fotos/BebidasFrias/Batida_platano.png";
+        imagen = "../public/img/Cafe_fotos/BebidasFrias/batida_guineo.png";
         break;
 
       case "jugo naranja":
-        imagen = "../img/Cafe_fotos/BebidasFrias/jugo_naranja.png";
+        imagen = "img/Cafe_fotos/BebidasFrias/jugo_naranja.png";
         break;
 
       case "agua":
-        imagen = "../img/Cafe_fotos/BebidasFrias/agua_natural.png";
+        imagen = "/img/Cafe_fotos/BebidasFrias/agua_natural.png";
         break;
 
       case "batida fresa":
-        imagen = "../img/Cafe_fotos/BebidasFrias/batida_fresa.png";
+        imagen = "img/Cafe_fotos/BebidasFrias/batida_fresa.png";
         break;
 
       case "refresco":
-        imagen = "../img/Cafe_fotos/BebidasFrias/refresco_negro.png";
+        imagen = "img/Cafe_fotos/BebidasFrias/refresco_negro.png";
         break;
 
       case "limonada":
-        imagen = "../img/Cafe_fotos/BebidasFrias/limonadas.png";
+        imagen = "img/Cafe_fotos/BebidasFrias/limonadas.png";
         break;
 
       case "cerveza":
-        imagen = "../img/Cafe_fotos/BebidasFrias/cerverza.png";
+        imagen = "img/Cafe_fotos/BebidasFrias/cerverza.png";
         break;
 
       default:
-        imagen = "../img/Cafe_fotos/BebidasFrias/chocolate_frio.png";
+        imagen = "img/Cafe_fotos/BebidasFrias/chocolate_frio.png";
     }
 
     div.innerHTML = `

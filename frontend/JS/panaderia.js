@@ -18,47 +18,47 @@ const obtenerPanaderia = async () => {
 
     switch (pan.nombre.toLowerCase()) {
       case "croissant":
-        imagen = "../img/Cafe_fotos/Panaderia/Croissants.png";
+        imagen = "img/Cafe_fotos/Panaderia/croissants.png";
         break;
 
       case "pan agua":
-        imagen = "../img/Cafe_fotos/Panaderia/pan_agua.png";
+        imagen = "img/Cafe_fotos/Panaderia/pan_agua.png";
         break;
 
       case "integral":
-        imagen = "../img/Cafe_fotos/Panaderia/Pan_Integral.png";
+        imagen = "img/Cafe_fotos/Panaderia/Pan_Integral.png";
         break;
 
       case "muffin":
-        imagen = "../img/Cafe_fotos/Panaderia/Muffin.png";
+        imagen = "img/Cafe_fotos/Panaderia/Muffin.png";
         break;
 
       case "baguette":
-        imagen = "../img/Cafe_fotos/Panaderia/baguette.png";
+        imagen = "img/Cafe_fotos/Panaderia/baguette.png";
         break;
 
       case "pan ajo":
-        imagen = "../img/Cafe_fotos/Panaderia/pan_ajo.png";
+        imagen = "img/Cafe_fotos/Panaderia/pan_ajo.png";
         break;
 
       case "pan avena":
-        imagen = "../img/Cafe_fotos/Panaderia/pan_avena.png";
+        imagen = "img/Cafe_fotos/Panaderia/pan_avena.png";
         break;
 
       case "centeno":
-        imagen = "../img/Cafe_fotos/Panaderia/pan_centeno.png";
+        imagen = "img/Cafe_fotos/Panaderia/pan_centeno.png";
         break;
 
       case "pepin":
-        imagen = "../img/Cafe_fotos/Panaderia/pan_pepin.png";
+        imagen = "img/Cafe_fotos/Panaderia/pan_pepin.png";
         break;
 
       case "pita":
-        imagen = "../img/Cafe_fotos/Panaderia/pan_pita.png";
+        imagen = "img/Cafe_fotos/Panaderia/pan_pita.png";
         break;
 
       default:
-        imagen = "../img/Cafe_fotos/Panaderia/pan_agua.png";
+        imagen = "img/Cafe_fotos/Panaderia/pan_agua.png";
     }
 
     div.innerHTML = `

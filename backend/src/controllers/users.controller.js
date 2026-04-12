@@ -1,8 +1,9 @@
 import prisma from "../prismaClient.js";
 import argon2 from "argon2";
 
+// REGISTRO
 export const crearUsuario = async (req, res) => {
-  const { nombre, apellido, email, password } = req.body;
+  const { nombre, apellido, email, password } = req.body || {};
 
   try {
     if (!nombre || !apellido || !email || !password) {
@@ -13,6 +14,7 @@ export const crearUsuario = async (req, res) => {
     const apellidoNormalizado = apellido.trim().toLowerCase();
     const emailNormalizado = email.trim().toLowerCase();
 
+    // Validar si existe por email
     const existeUsuario = await prisma.user.findUnique({
       where: { email: emailNormalizado },
     });
@@ -21,12 +23,15 @@ export const crearUsuario = async (req, res) => {
       return res.status(400).json({ error: "El usuario ya existe" });
     }
 
+    //  Hash de contraseña
     const passwordHash = await argon2.hash(password);
 
+    //  Avatar automático
     const avatarUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(
       nombreNormalizado + " " + apellidoNormalizado,
     )}&background=random&color=fff`;
 
+    // Crear usuario
     const nuevoUsuario = await prisma.user.create({
       data: {
         nombre: nombreNormalizado,
@@ -37,7 +42,13 @@ export const crearUsuario = async (req, res) => {
       },
     });
 
-    return res.status(201).json(nuevoUsuario);
+    // 🔒 No enviar password
+    return res.status(201).json({
+      id: nuevoUsuario.id,
+      nombre: nuevoUsuario.nombre,
+      email: nuevoUsuario.email,
+      avatar: nuevoUsuario.avatar,
+    });
   } catch (error) {
     return res.status(500).json({ error: "Error al crear el usuario" });
   }
@@ -45,13 +56,13 @@ export const crearUsuario = async (req, res) => {
 
 // LOGIN
 export const loginUsuario = async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password } = req.body || {};
 
   try {
     if (!email || !password) {
-      return res
-        .status(400)
-        .json({ error: "Email y contraseña son requeridos" });
+      return res.status(400).json({
+        error: "Email y contraseña son requeridos",
+      });
     }
 
     const emailNormalizado = email.trim().toLowerCase();
@@ -64,12 +75,14 @@ export const loginUsuario = async (req, res) => {
       return res.status(400).json({ error: "Credenciales inválidas" });
     }
 
+    // Verificar password
     const passwordValida = await argon2.verify(usuario.password, password);
 
     if (!passwordValida) {
       return res.status(400).json({ error: "Credenciales inválidas" });
     }
 
+    //  Respuesta sin password
     return res.status(200).json({
       message: "Login exitoso",
       usuario: {

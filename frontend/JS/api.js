@@ -1,14 +1,8 @@
-import axios from "axios";
-
 export const apiValues = async () => {
   try {
+    const response = await fetch("http://localhost:3000/api/productos");
 
-    const response = await axios.post(
-      "http://localhost:3000/api/crear-usuario"
-    );
-
-    return response.data;
-
+    return response.json();
   } catch (error) {
     console.error("Error:", error);
   }

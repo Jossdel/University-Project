@@ -1,31 +1,40 @@
-import axios from "axios";
-
 const form = document.getElementById("formUsuario");
 
 form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  e.preventDefault(); // 🚫 evita que la página se recargue
 
-  // capturar datos del formulario
-  const datos = {
-    nombre: document.getElementById("nombre").value,
-    apellido: document.getElementById("apellido").value,
-    email: document.getElementById("email").value,
-    password: document.getElementById("password").value
-  };
+  const nombre = document.getElementById("nombre").value;
+  const apellido = document.getElementById("apellido").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
   try {
-    const response = await axios.post(
-      "http://localhost:3000/api/crear-usuario",
-      datos
-    );
+    const response = await fetch("http://localhost:3000/api/crear-usuario", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nombre,
+        apellido,
+        email,
+        password,
+      }),
+    });
 
-    console.log("Usuario creado:", response.data);
-    alert("Usuario creado correctamente");
+    const data = await response.json();
 
-    form.reset();
+    if (!response.ok) {
+      console.error(data.error);
+      alert(data.error);
+      return;
+    }
 
+    console.log("Usuario creado:", data);
+    alert("Usuario creado correctamente ✅");
+
+    form.reset(); // limpia el formulario
   } catch (error) {
     console.error("Error:", error);
-    alert("Error al crear usuario");
   }
 });

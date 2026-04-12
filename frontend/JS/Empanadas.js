@@ -18,43 +18,43 @@ const obtenerEmpanadas = async () => {
 
     switch (empanada.nombre.toLowerCase()) {
       case "pollo":
-        imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo.png";
+        imagen = "../public/img/Cafe_fotos/Empanadas/empanada_pollo.png";
         break;
 
       case "pizza":
-        imagen = "../img/Cafe_fotos/Empanadas/empanada_pizza.png";
+        imagen = "../public/img/Cafe_fotos/Empanadas/empanada_pizza.png";
         break;
 
       case "queso":
-        imagen = "../img/Cafe_fotos/Empanadas/Empanadas_queso.png";
+        imagen = "../public/img/Cafe_fotos/Empanadas/Empanadas_queso.png";
         break;
 
       case "carne":
-        imagen = "../img/Cafe_fotos/Empanadas/empanada_carne.png";
+        imagen = "img/Cafe_fotos/Empanadas/empanada_carne.png";
         break;
 
       case "jamon queso":
-        imagen = "../img/Cafe_fotos/Empanadas/empanada_jamon_y_queso.png";
+        imagen = "img/Cafe_fotos/Empanadas/empanada_jamon_y_queso.png";
         break;
 
       case "atun":
-        imagen = "../img/Cafe_fotos/Empanadas/empanada_atun.png";
+        imagen = "img/Cafe_fotos/Empanadas/empanada_atun.png";
         break;
 
       case "maiz res":
-        imagen = "../img/Cafe_fotos/Empanadas/empanada_maíz_res.png";
+        imagen = "img/Cafe_fotos/Empanadas/empanada_maíz_res.png";
         break;
 
       case "pollo queso":
-        imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo_queso.png";
+        imagen = "img/Cafe_fotos/Empanadas/empanada_pollo_queso.png";
         break;
 
       case "yuca":
-        imagen = "../img/Cafe_fotos/Empanadas/empanada_yuca.png";
+        imagen = "img/Cafe_fotos/Empanadas/empanada_yuca.png";
         break;
 
       default:
-        imagen = "../img/Cafe_fotos/Empanadas/empanada_pollo.png";
+        imagen = "img/Cafe_fotos/Empanadas/empanada_pollo.png";
     }
     div.innerHTML = `
       <figure class="image-box">
