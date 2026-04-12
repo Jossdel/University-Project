@@ -1,19 +1,82 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/registro.css" />
+    <title>Registro — Cafetería Aroma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="registro.css" />
   </head>
   <body>
-    <form id="formUsuario">
-      <input type="text" id="nombre" placeholder="Nombre" required />
-      <input type="text" id="apellido" placeholder="Apellido" required />
-      <input type="email" id="email" placeholder="Correo" required />
-      <input type="password" id="password" placeholder="Password" required />
-      <button type="submit">Crear Usuario</button>
-    </form>
-    <script src="../JS/apiRegistro.js"></script>
+    <div class="ca-root">
+      <div class="ca-card">
+        <div class="ca-top-bar"></div>
+        <div class="ca-deco"></div>
+        <div class="ca-deco2"></div>
+
+        <div class="ca-brand">
+          <div class="ca-logo">☕</div>
+          <span class="ca-brand-name">Cafetería Aroma</span>
+        </div>
+
+        <h1 class="ca-heading">Crear cuenta</h1>
+        <p class="ca-sub">Únete y disfruta de nuestros mejores momentos</p>
+
+        <div class="ca-row">
+          <div class="ca-field">
+            <label for="caNombre">Nombre</label>
+            <input type="text" id="caNombre" placeholder="Juan" autocomplete="given-name" />
+          </div>
+          <div class="ca-field">
+            <label for="caApellido">Apellido</label>
+            <input type="text" id="caApellido" placeholder="Pérez" autocomplete="family-name" />
+          </div>
+        </div>
+
+        <div class="ca-field">
+          <label for="caEmail">Correo electrónico</label>
+          <input type="email" id="caEmail" placeholder="juan@ejemplo.com" autocomplete="email" />
+        </div>
+
+        <div class="ca-field">
+          <label for="caPw">Contraseña</label>
+          <div class="ca-pw-wrap">
+            <input type="password" id="caPw" placeholder="Mínimo 8 caracteres" autocomplete="new-password" />
+            <button class="ca-eye" type="button" id="caEyeBtn" aria-label="Mostrar contraseña">
+              <svg id="caEye" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <div class="ca-strength">
+            <div class="ca-bar" id="cb1"></div>
+            <div class="ca-bar" id="cb2"></div>
+            <div class="ca-bar" id="cb3"></div>
+            <div class="ca-bar" id="cb4"></div>
+          </div>
+          <div class="ca-strength-lbl" id="caLbl"></div>
+        </div>
+
+        <button class="ca-btn" type="button" id="caSubmit">Crear cuenta</button>
+
+        <div class="ca-divider">
+          <div class="ca-div-line"></div>
+          <span>¿Ya tienes cuenta?</span>
+          <div class="ca-div-line"></div>
+        </div>
+
+        <div class="ca-footer">
+          <a href="login.html">Iniciar sesión →</a>
+        </div>
+
+        <div class="ca-toast" id="caToast">¡Bienvenido a Cafetería Aroma!</div>
+      </div>
+    </div>
+    
+<script type="module" src="../../JS/apiRegistro.js"></script>
   </body>
 </html>

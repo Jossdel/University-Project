@@ -26,7 +26,7 @@ const obtenerPanaderia = async () => {
         break;
 
       case "integral":
-        imagen = "img/Cafe_fotos/Panaderia/Pan_Integral.png";
+        imagen = "img/Cafe_fotos/Panaderia/pan_integral.png";
         break;
 
       case "muffin":
