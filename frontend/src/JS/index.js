@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!token) {
     window.location.href = "/src/assets/login.html";
   }
-  // 👇 aquí sigue tu código normal
+  // aquí sigue tu código normal
 });
 document.addEventListener("DOMContentLoaded", async () => {
   try {

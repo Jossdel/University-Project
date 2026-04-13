@@ -36,14 +36,49 @@ export const actualizarCarrito = () => {
     sumaTotal += item.precio * item.cantidad;
     totalItems += item.cantidad;
 
+    // =========================
+    // CONTENIDO CON CONTROLES
+    // =========================
     div.innerHTML = `
-      <span>${item.nombre} x${item.cantidad}</span>
+      <span>${item.nombre}</span>
+
+      <div class="controles-cantidad">
+        <button class="disminuir">-</button>
+        <span>${item.cantidad}</span>
+        <button class="aumentar">+</button>
+      </div>
+
       <span>RD$ ${item.precio * item.cantidad}</span>
       <span class="eliminar">x</span>
     `;
 
+    // ELIMINAR COMPLETO
     div.querySelector(".eliminar").addEventListener("click", () => {
       carrito = carrito.filter((p) => p.nombre !== item.nombre);
+
+      guardarCarrito();
+      actualizarCarrito();
+    });
+
+    // =========================
+    // AUMENTAR
+    // =========================
+    div.querySelector(".aumentar").addEventListener("click", () => {
+      item.cantidad++;
+
+      guardarCarrito();
+      actualizarCarrito();
+    });
+
+    // =========================
+    // DISMINUIR
+    // =========================
+    div.querySelector(".disminuir").addEventListener("click", () => {
+      if (item.cantidad > 1) {
+        item.cantidad--;
+      } else {
+        carrito = carrito.filter((p) => p.nombre !== item.nombre);
+      }
 
       guardarCarrito();
       actualizarCarrito();
@@ -58,7 +93,7 @@ export const actualizarCarrito = () => {
     contador.textContent = totalItems;
   }
 
-  // 🔥 BOTONES BIEN HECHOS
+  // BOTONES
   const buttonComprar = document.createElement("button");
   buttonComprar.id = "btn-comprar";
   buttonComprar.textContent = "Comprar";
@@ -73,7 +108,19 @@ export const actualizarCarrito = () => {
   botonesPadres.appendChild(buttonComprar);
   botonesPadres.appendChild(buttonCancelar);
 
-  lista.appendChild(botonesPadres);
+  // FOOTER FIJO
+  const panel = document.getElementById("carritoPanel");
+
+  const viejoFooter = document.querySelector(".footer-fix");
+  if (viejoFooter) viejoFooter.remove();
+
+  const footer = document.createElement("div");
+  footer.classList.add("footer-fix");
+
+  footer.appendChild(total);
+  footer.appendChild(botonesPadres);
+
+  panel.appendChild(footer);
 };
 
 /* EVENTOS */
@@ -82,22 +129,33 @@ document.addEventListener("click", (e) => {
 
   if (e.target.id === "btn-comprar") {
     if (carrito.length === 0) {
-      alert("El carrito está vacío 🛒");
+      alert("El carrito está vacío");
       return;
     }
 
-    alert("Compra realizada con éxito ✅");
+    alert("Compra realizada con éxito");
 
     carrito = [];
     guardarCarrito();
     actualizarCarrito();
 
-    panel.classList.remove("activo"); // 🔥 cierra después de comprar
+    panel.classList.remove("activo");
   }
 
   if (e.target.id === "btn-cancelar") {
-    panel.classList.remove("activo"); // 🔥 SOLO CIERRA
+    panel.classList.remove("activo");
   }
 });
 
 actualizarCarrito();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const icono = document.querySelector(".carrito");
+  const panel = document.getElementById("carritoPanel");
+
+  if (!icono || !panel) return;
+
+  icono.addEventListener("click", () => {
+    panel.classList.toggle("activo");
+  });
+});

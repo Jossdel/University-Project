@@ -83,7 +83,7 @@ body::before {
 .perfil-icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 🔥 tipo Instagram */
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -94,7 +94,7 @@ body::before {
   border-radius: 12px;
   padding: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  z-index: 9999; /* 🔥 CLAVE */
+  z-index: 9999;
   color: #fff;
 }
 .perfil-header {
@@ -130,6 +130,7 @@ body::before {
   font-size: x-small;
   width: 25px;
 }
+
 /* =========================
    HERO PRINCIPAL
 ========================= */
@@ -251,7 +252,6 @@ body::before {
   justify-content: center;
 }
 
-/* ✅ FIX */
 .eliminar p {
   font-size: 15px;
 }
@@ -303,8 +303,6 @@ body::before {
   overflow-x: hidden;
   width: 78%;
   padding: 10px;
-
-  /* ✅ MEJORA SUAVE */
   scroll-behavior: smooth;
 }
 
@@ -386,6 +384,10 @@ body::before {
   height: 45px;
 }
 
+#btn-cancelar {
+  background-color: #ff0000;
+}
+
 /* =========================
    BOTONES
 ========================= */
@@ -410,7 +412,6 @@ body::before {
   cursor: pointer;
 }
 
-/* ✅ FIX HOVER GLOBAL */
 .prev-caliente:hover,
 .next-caliente:hover,
 .prev-fria:hover,
@@ -461,4 +462,66 @@ body::before {
 .copyright {
   margin-top: 20px;
   color: #cfccc9;
+}
+
+/* =========================
+   FIJAR BOTONES Y TOTAL ABAJO
+========================= */
+
+.carrito-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+#lista-carrito {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.botones-carrito {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding-top: 10px;
+}
+
+#total {
+  position: sticky;
+  bottom: 60px;
+  background: white;
+}
+
+/* =========================
+   CONTROLES DE CANTIDAD (AGREGADO)
+========================= */
+
+.controles-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.controles-cantidad button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: #5c3d2e;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.controles-cantidad button:hover {
+  background: #8c623b;
+}
+
+.controles-cantidad span {
+  min-width: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.item-carrito {
+  align-items: center;
 }
