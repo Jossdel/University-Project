@@ -1,0 +1,497 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cream-light: #f2e5c6;
+  --cream-gold: #f2d9a0;
+  --crimson: #75162d;
+  --burgundy: #560b18;
+  --deep: #3b010b;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 60% 50% at 15% 50%,
+      rgba(117, 22, 45, 0.35) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 60% at 85% 50%,
+      rgba(86, 11, 24, 0.4) 0%,
+      transparent 70%
+    );
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 60px,
+    rgba(242, 217, 160, 0.025) 60px,
+    rgba(242, 217, 160, 0.025) 61px
+  );
+  pointer-events: none;
+}
+
+/* ── Wrapper ─────────────────────────────────── */
+.wrapper {
+  display: flex;
+  width: min(900px, 95vw);
+  min-height: 540px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(242, 217, 160, 0.15),
+    0 30px 80px rgba(0, 0, 0, 0.7),
+    0 0 120px rgba(117, 22, 45, 0.2);
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Panel izquierdo ──────────────────────────── */
+.panel-left {
+  flex: 1;
+  background: var(--burgundy);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+  overflow: hidden;
+}
+
+.panel-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 80% 80% at 50% 30%,
+      rgba(117, 22, 45, 0.7) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      var(--crimson) 0%,
+      var(--burgundy) 60%,
+      var(--deep) 100%
+    );
+}
+
+.orb {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 1px solid rgba(242, 217, 160, 0.12);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.orb::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(242, 217, 160, 0.08);
+}
+.orb::after {
+  content: "";
+  position: absolute;
+  inset: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(242, 217, 160, 0.06);
+}
+
+.panel-left-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.brand-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.4rem;
+}
+.brand-icon svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 12px rgba(242, 217, 160, 0.3));
+}
+
+/* "Est. 2024" — pequeño, espaciado, tracking amplio */
+.brand-label {
+  font-family: "Cinzel", serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(242, 217, 160, 0.45);
+  margin-bottom: 0.6rem;
+}
+
+/* Nombre principal — Playfair grande, italic, dominante */
+.brand-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--cream-gold);
+  margin-bottom: 0.9rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Tagline — Cormorant ligero, cálido */
+.brand-tagline {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(242, 229, 198, 0.55);
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+.divider-ornament {
+  margin: 1.8rem auto;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 140px;
+}
+.divider-ornament span {
+  flex: 1;
+  height: 1px;
+  background: rgba(242, 217, 160, 0.22);
+}
+.divider-ornament i {
+  width: 5px;
+  height: 5px;
+  background: rgba(242, 217, 160, 0.4);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* Cita — Cormorant muy tenue */
+.panel-left-quote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(242, 229, 198, 0.35);
+  letter-spacing: 0.03em;
+  line-height: 1.9;
+  max-width: 195px;
+}
+
+/* ── Panel derecho ────────────────────────────── */
+.panel-right {
+  flex: 1.1;
+  background: var(--cream-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.5rem 3rem;
+  position: relative;
+}
+
+.panel-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--crimson),
+    var(--cream-gold),
+    var(--crimson)
+  );
+}
+
+/* Eyebrow — Cinzel minúsculo, tracking */
+.form-eyebrow {
+  font-family: "Cinzel", serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  opacity: 0.7;
+  margin-bottom: 0.45rem;
+}
+
+/* Heading — Playfair grande, impactante */
+.form-heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--deep);
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+/* Subheading — Cormorant italic, tenue */
+.form-subheading {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(59, 1, 11, 0.45);
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Fields ───────────────────────────────────── */
+.field {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Etiqueta — Cinzel pequeño, espaciado, crimson */
+.field label {
+  display: block;
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 0.5rem;
+}
+
+/* Input — Cormorant legible */
+.field input {
+  width: 100%;
+  padding: 0.8rem 0.8rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid rgba(117, 22, 45, 0.25);
+  border-radius: 0;
+  color: var(--deep);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  outline: none;
+  transition:
+    border-color 0.3s,
+    background 0.3s;
+}
+
+.field input::placeholder {
+  color: rgba(59, 1, 11, 0.28);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.field input:focus {
+  border-bottom-color: var(--crimson);
+  background: rgba(117, 22, 45, 0.03);
+}
+
+.field-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5px;
+  width: 0;
+  background: var(--crimson);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.field input:focus ~ .field-underline {
+  width: 100%;
+}
+
+/* ── Opciones ─────────────────────────────────── */
+.row-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.remember input[type="checkbox"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid rgba(117, 22, 45, 0.35);
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+  flex-shrink: 0;
+}
+.remember input[type="checkbox"]:checked {
+  background: var(--crimson);
+  border-color: var(--crimson);
+}
+.remember input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 9px;
+  border: 1.5px solid var(--cream-light);
+  border-left: none;
+  border-top: none;
+  transform: rotate(42deg);
+}
+
+/* "Recordarme" — Cormorant legible */
+.remember span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(59, 1, 11, 0.55);
+  letter-spacing: 0.04em;
+}
+
+/* Olvidaste contraseña — Cormorant italic */
+.forgot {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--crimson);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+.forgot:hover {
+  color: var(--deep);
+}
+
+/* ── Botón ────────────────────────────────────── */
+.btn-login {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--crimson) 0%, var(--burgundy) 100%);
+  color: var(--cream-gold);
+  border: none;
+  border-radius: 1px;
+  /* Cinzel espaciado para el botón */
+  font-family: "Cinzel", serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(117, 22, 45, 0.35);
+}
+
+.btn-login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(242, 217, 160, 0.15) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-login:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(117, 22, 45, 0.45);
+}
+.btn-login:hover::before {
+  opacity: 1;
+}
+.btn-login:active {
+  transform: translateY(0);
+}
+
+/* ── Footer ───────────────────────────────────── */
+.form-footer {
+  margin-top: 1.6rem;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(59, 1, 11, 0.4);
+  letter-spacing: 0.03em;
+}
+
+.form-footer a {
+  color: var(--crimson);
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.form-footer a:hover {
+  color: var(--deep);
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 640px) {
+  .panel-left {
+    display: none;
+  }
+  .panel-right {
+    padding: 2.5rem 1.8rem;
+  }
+  .form-heading {
+    font-size: 1.7rem;
+  }
+}

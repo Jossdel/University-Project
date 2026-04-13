@@ -81,7 +81,7 @@ body::before {
   height: 100vh;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/img-main/primerFondo.png");
+    url("/img/img-main/primerFondo.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -130,7 +130,7 @@ body::before {
   padding: 50px 0;
   background-image:
     linear-gradient(#8c623bcc, rgba(140, 98, 59, 0.8)),
-    url("../img/img-main/segundoFondo.png");
+    url("/img/img-main/segundoFondo.png");
 }
 
 /* =========================
@@ -193,9 +193,11 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  P {
-    font-size: 15px;
-  }
+}
+
+/* ✅ FIX */
+.eliminar p {
+  font-size: 15px;
 }
 
 .eliminar:hover {
@@ -245,6 +247,9 @@ body::before {
   overflow-x: hidden;
   width: 78%;
   padding: 10px;
+
+  /* ✅ MEJORA SUAVE */
+  scroll-behavior: smooth;
 }
 
 /* ITEM */
@@ -306,6 +311,7 @@ body::before {
   background-color: #6f4e37;
   transform: scale(1.05);
 }
+
 .botones-carrito {
   width: 100%;
   display: flex;
@@ -314,7 +320,7 @@ body::before {
 
 #btn-cancelar,
 #btn-comprar {
-  flex: 3; /* cada botón ocupa todo el espacio disponible */
+  flex: 3;
   background-color: #53222a;
   color: white;
   border: none;
@@ -323,6 +329,7 @@ body::before {
   cursor: pointer;
   height: 45px;
 }
+
 /* =========================
    BOTONES
 ========================= */
@@ -347,8 +354,19 @@ body::before {
   cursor: pointer;
 }
 
+/* ✅ FIX HOVER GLOBAL */
 .prev-caliente:hover,
-.next-caliente:hover {
+.next-caliente:hover,
+.prev-fria:hover,
+.next-fria:hover,
+.prev-empanada:hover,
+.next-empanada:hover,
+.prev-panaderia:hover,
+.next-panaderia:hover,
+.prev-reposteria:hover,
+.next-reposteria:hover,
+.prev-sandwich:hover,
+.next-sandwich:hover {
   background: #6f4e37;
   transform: scale(1.1);
 }

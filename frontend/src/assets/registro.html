@@ -3,80 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro — Cafetería Aroma</title>
+    <title>Registro</title>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="registro.css" />
   </head>
   <body>
-    <div class="ca-root">
-      <div class="ca-card">
-        <div class="ca-top-bar"></div>
-        <div class="ca-deco"></div>
-        <div class="ca-deco2"></div>
+    <div class="cr-root">
+      <div class="cr-wrapper">
+        <!-- Panel derecho — formulario -->
+        <div class="cr-panel-right">
+          <div class="cr-top-accent"></div>
 
-        <div class="ca-brand">
-          <div class="ca-logo">☕</div>
-          <span class="ca-brand-name">Cafetería Aroma</span>
-        </div>
-
-        <h1 class="ca-heading">Crear cuenta</h1>
-        <p class="ca-sub">Únete y disfruta de nuestros mejores momentos</p>
-
-        <div class="ca-row">
-          <div class="ca-field">
-            <label for="caNombre">Nombre</label>
-            <input type="text" id="caNombre" placeholder="Juan" autocomplete="given-name" />
+          <div class="cr-form-top">
+            <p class="cr-eyebrow">Únete a nosotros</p>
+            <h2 class="cr-heading">Crear cuenta</h2>
+            <p class="cr-subheading">Disfruta de nuestros mejores momentos</p>
           </div>
-          <div class="ca-field">
-            <label for="caApellido">Apellido</label>
-            <input type="text" id="caApellido" placeholder="Pérez" autocomplete="family-name" />
-          </div>
-        </div>
 
-        <div class="ca-field">
-          <label for="caEmail">Correo electrónico</label>
-          <input type="email" id="caEmail" placeholder="juan@ejemplo.com" autocomplete="email" />
-        </div>
+          <form onsubmit="return false;" id="crForm">
+            <div class="cr-row">
+              <div class="cr-field">
+                <label for="crNombre">Nombre</label>
+                <input
+                  type="text"
+                  id="crNombre"
+                  placeholder="Juan"
+                  autocomplete="given-name"
+                />
+                <div class="cr-underline"></div>
+              </div>
+              <div class="cr-field">
+                <label for="crApellido">Apellido</label>
+                <input
+                  type="text"
+                  id="crApellido"
+                  placeholder="Pérez"
+                  autocomplete="family-name"
+                />
+                <div class="cr-underline"></div>
+              </div>
+            </div>
 
-        <div class="ca-field">
-          <label for="caPw">Contraseña</label>
-          <div class="ca-pw-wrap">
-            <input type="password" id="caPw" placeholder="Mínimo 8 caracteres" autocomplete="new-password" />
-            <button class="ca-eye" type="button" id="caEyeBtn" aria-label="Mostrar contraseña">
-              <svg id="caEye" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                <circle cx="12" cy="12" r="3"/>
-              </svg>
+            <div class="cr-field">
+              <label for="crEmail">Correo electrónico</label>
+              <input
+                type="email"
+                id="crEmail"
+                placeholder="juan@ejemplo.com"
+                autocomplete="email"
+              />
+              <div class="cr-underline"></div>
+            </div>
+
+            <div class="cr-field">
+              <label for="crPw">Contraseña</label>
+              <div class="cr-pw-wrap">
+                <input
+                  type="password"
+                  id="crPw"
+                  placeholder="Mínimo 8 caracteres"
+                  autocomplete="new-password"
+                />
+                <button
+                  class="cr-eye"
+                  type="button"
+                  id="crEyeBtn"
+                  aria-label="Mostrar contraseña"
+                >
+                  <svg
+                    id="crEyeIcon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </button>
+              </div>
+              <!-- Indicador de fortaleza -->
+              <div class="cr-strength-bars">
+                <div class="cr-bar" id="cb1"></div>
+                <div class="cr-bar" id="cb2"></div>
+                <div class="cr-bar" id="cb3"></div>
+                <div class="cr-bar" id="cb4"></div>
+              </div>
+              <div class="cr-strength-lbl" id="crStrLbl"></div>
+              <div class="cr-underline"></div>
+            </div>
+
+            <button class="cr-btn" type="button" id="crSubmit">
+              Crear cuenta
             </button>
+          </form>
+
+          <div class="cr-divider">
+            <div class="cr-div-line"></div>
+            <span>¿Ya tienes cuenta?</span>
+            <div class="cr-div-line"></div>
           </div>
-          <div class="ca-strength">
-            <div class="ca-bar" id="cb1"></div>
-            <div class="ca-bar" id="cb2"></div>
-            <div class="ca-bar" id="cb3"></div>
-            <div class="ca-bar" id="cb4"></div>
-          </div>
-          <div class="ca-strength-lbl" id="caLbl"></div>
+
+          <p class="cr-footer">
+            <a href="/src/assets/login.html">Iniciar sesión →</a>
+          </p>
+
+          <!-- Toast de confirmación -->
+          <div class="cr-toast" id="crToast">¡Cuenta creada con éxito! ☕</div>
         </div>
-
-        <button class="ca-btn" type="button" id="caSubmit">Crear cuenta</button>
-
-        <div class="ca-divider">
-          <div class="ca-div-line"></div>
-          <span>¿Ya tienes cuenta?</span>
-          <div class="ca-div-line"></div>
-        </div>
-
-        <div class="ca-footer">
-          <a href="login.html">Iniciar sesión →</a>
-        </div>
-
-        <div class="ca-toast" id="caToast">¡Bienvenido a Cafetería Aroma!</div>
       </div>
     </div>
-    
-<script type="module" src="../../JS/apiRegistro.js"></script>
+
+    <script type="module" src="/src/JS/apiRegistro.js"></script>
   </body>
 </html>
