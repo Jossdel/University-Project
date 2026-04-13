@@ -53,3 +53,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error(error);
   }
 });
+const cargarAvatar = async () => {
+  try {
+    const res = await fetch("http://localhost:3000/api/user", {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+
+    const usuario = await res.json();
+
+    const img = document.getElementById("avatar-img");
+
+    img.src = usuario.avatar || "/img/default.png";
+  } catch (error) {
+    console.error("Error cargando avatar:", error);
+  }
+};
+
+// Ejecutar al iniciar
+cargarAvatar();

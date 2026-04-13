@@ -18,6 +18,6 @@ router.delete("/eliminar-producto/:id", eliminarProducto);
 router.delete("/eliminar-todos-productos", eliminarTodosProductos);
 router.post("/register", crearUsuario);
 router.post("/login", loginUsuario);
-router.get("/user/:id", authMiddleware, getUser);
+router.get("/user", authMiddleware, getUser);
 
 export default router;

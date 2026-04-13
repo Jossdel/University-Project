@@ -37,7 +37,7 @@ const obtenerImagen = (nombre, tipo) => {
     empanada: {
       pollo: "/img/Cafe_fotos/Empanadas/empanada_pollo.png",
       pizza: "/img/Cafe_fotos/Empanadas/empanada_pizza.png",
-      queso: "/img/Cafe_fotos/Empanadas/Empanadas_queso.png",
+      queso: "/img/Cafe_fotos/Empanadas/empanadas_queso.png",
       carne: "/img/Cafe_fotos/Empanadas/empanada_carne.png",
       jamon_queso: "/img/Cafe_fotos/Empanadas/empanada_jamon_y_queso.png",
       atun: "/img/Cafe_fotos/Empanadas/empanada_atun.png",
@@ -61,13 +61,13 @@ const obtenerImagen = (nombre, tipo) => {
 
     reposteria: {
       dona_fresa: "/img/Cafe_fotos/Reposteria/dona_fresa.png",
-      dona_choco: "/img/Cafe_fotos/Reposteria/dona_chocolate.png", // 🔥 FIX
+      dona_choco: "/img/Cafe_fotos/Reposteria/dona_chocolate.png",
       brownie: "/img/Cafe_fotos/Reposteria/brownies.png",
       cheesecake: "/img/Cafe_fotos/Reposteria/cheesecake.png",
-      galleta: "/img/Cafe_fotos/Reposteria/galletas.png", // 🔥 FIX
-      churro: "/img/Cafe_fotos/Reposteria/churro.png", // 🔥 FIX
+      galleta: "/img/Cafe_fotos/Reposteria/galletas.png",
+      churro: "/img/Cafe_fotos/Reposteria/churro.png",
       cupcake: "/img/Cafe_fotos/Reposteria/cupcakes.png",
-      tarta: "/img/Cafe_fotos/Reposteria/tarta_frutas.png", // 🔥 FIX
+      tarta: "/img/Cafe_fotos/Reposteria/tarta_frutas.png",
       tres_leches: "/img/Cafe_fotos/Reposteria/tres_leche.png",
       flan: "/img/Cafe_fotos/Reposteria/flan.png",
       fresa_crema: "/img/Cafe_fotos/Reposteria/fresa_con_crema.png",
